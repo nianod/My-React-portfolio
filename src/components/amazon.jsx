@@ -8,7 +8,7 @@ function Amazon () {
                 <p>Let's Start coding right away</p>
             </div>
             <div className="amazon">
-                <p>Let's Start coding right away</p>
+                <p>This is my first Application with react</p>
             </div>
         </>
     )
