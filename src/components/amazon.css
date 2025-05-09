@@ -1,14 +1,18 @@
 body {
-    background: linear-gradient(to right, green, blue);
+    background: linear-gradient(to right, rgb(187, 187, 187), rgb(145, 145, 230));
     display: flex;
 }
-.navbar {
+.Navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 20px;
+    height: 20vh;
+    background: rgb(98, 243, 221);
 }
 .navlist {
     display: flex;
     gap: 20px;
     color: blue;
 }
+ 
