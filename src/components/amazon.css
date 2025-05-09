@@ -1,14 +1,14 @@
-.amazon {
-    background: fuchsia;
-    padding: 15px;
-    border: 1px solid #fff;
-    width: 50%;
+body {
+    background: linear-gradient(to right, green, blue);
+    display: flex;
+}
+.navbar {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
 }
-p {
-    color: white;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.navlist {
+    display: flex;
+    gap: 20px;
+    color: blue;
 }

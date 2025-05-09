@@ -1,17 +1,17 @@
-import React from "react"
-import './amazon.css'
+import React from 'react'
+import "./amazon.css"
 
-function Amazon () {
-    return(
-        <>
-            <div className="amazon">
-                <p>Let's Start coding right away</p>
-            </div>
-            <div className="amazon">
-                <p>This is my first Application with react</p>
-            </div>
-        </>
-    )
+const Amazon = () => {
+  return (
+    <div className='Navbar'>
+        <h1>Welcome to Arnold's Tech</h1>
+        <ul className='navlist'>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Home</li>
+        </ul>     
+    </div>
+  )
 }
 
 export default Amazon
