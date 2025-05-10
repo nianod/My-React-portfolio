@@ -3,7 +3,7 @@ import "./amazon.css"
 
 const Amazon = () => {
     const handler = () => {
-        alert("We deliver here")
+        
     }
   return (
     <>
