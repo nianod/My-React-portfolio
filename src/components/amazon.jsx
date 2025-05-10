@@ -2,7 +2,11 @@ import React from 'react'
 import "./amazon.css"
 
 const Amazon = () => {
+    const handler = () => {
+        alert("We deliver here")
+    }
   return (
+    <>
     <div className='Nav'>
         <div className='Navbar'>
             <h1>Welcome to Arnold's Tech</h1>
@@ -13,6 +17,11 @@ const Amazon = () => {
             </ul>     
         </div>
     </div>
+    <div>
+        <button onClick={handler}>click me</button>
+    </div>
+    </>
+    
   )
 }
 

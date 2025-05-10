@@ -6,8 +6,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px;
-    height: 20vh;
+    height: calc(100-20);
     background: rgb(98, 243, 221);
 }
 .navlist {

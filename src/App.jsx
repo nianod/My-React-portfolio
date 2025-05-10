@@ -5,6 +5,7 @@ const App = () => {
   return (
     <div>
       <Amazon/>
+      <Amazon/>
     </div>
   )
 }
