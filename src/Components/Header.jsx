@@ -17,13 +17,14 @@ const Header = () => {
 }
 
 function Push() {
-  const clicks = () => {
+  const clicks = (event) => {
     alert("clicked")
+    event.preventdefault()
   }
   return (
     <div>
     <h2>Welcome to my pop</h2>
-    <button onClick={clicks }></button>
+    <button onClick={clicks }>try me</button>
     </div>
   )  
 }
