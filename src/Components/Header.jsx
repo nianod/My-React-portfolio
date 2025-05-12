@@ -20,6 +20,8 @@ function Push() {
   const clicks = (event) => {
     alert("clicked")
     event.preventdefault()
+    console.log("correct");
+    
   }
   return (
     <div>
