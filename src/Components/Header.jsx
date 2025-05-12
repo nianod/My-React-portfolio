@@ -10,16 +10,20 @@ const Header = () => {
        <div className='profile-pic'>
             <img src="/arnold.png" alt="myself" />
             <Push />
-            <Push/>
+            
        </div>
     </div>
   )
 }
 
 function Push() {
+  const clicks = () => {
+    alert("clicked")
+  }
   return (
     <div>
     <h2>Welcome to my pop</h2>
+    <button onClick={clicks }></button>
     </div>
   )  
 }
