@@ -1,10 +1,11 @@
  import React from 'react'
- import Header from './Components/header'
+ import Profile, { NavC } from './Components/header'
  
  const App = () => {
    return (
      <div>
-       <Header/>
+       <Profile/>
+       <NavC/>
      </div>
    )
  }
