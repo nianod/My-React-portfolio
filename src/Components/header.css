@@ -1,18 +1,18 @@
+
 *{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    margin: 10px;
-    background: #ffd3ff;
-    height: 20vh;
-}
 .Profile-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 20vh;
+    background: fuchsia;
     gap: 10px;
+    margin: 10 auto;
+    padding: 5px;
 }
 h1 {
     align-items: center;
@@ -22,9 +22,13 @@ img {
     object-fit: cover;
     border: 3px solid #ffd3ff;
 }
-.navs{
+nav{
     align-items: center;
-    display: flex;   
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: blue;
+    text-decoration: none;
 }
 .image {
     display: flex;
