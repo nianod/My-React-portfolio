@@ -10,7 +10,7 @@ const user = {
   imageURL: "3c4813fa70d7f0597c00220179dceb9f.png",
   imageSize: 50,
 };
-
+  
 function Profile() {
   return (
     <>
