@@ -10,21 +10,23 @@ const user = {
   imageURL: "3c4813fa70d7f0597c00220179dceb9f.png",
   imageSize: 50,
 };
-  
+
 function Profile() {
   return (
     <>
       <div className="Profile-section">
-        <h1>{user.name}</h1>
-        <img
-          className="ownerimage"
-          src={user.imageURL}
-          alt={"photo of " + user.name}
-          style={{
-            width: user.imageSize,
-            height: user.imageSize,
-          }}
-        />
+        <div className="image">
+          <h1>{user.name}</h1>
+          <img
+            className="ownerimage"
+            src={user.imageURL}
+            alt={"photo of " + user.name}
+            style={{
+              width: user.imageSize,
+              height: user.imageSize,
+            }}
+          />
+        </div>
         <div className="navs">
           <nav>
             {navContents.map((item, index) => (
@@ -49,4 +51,3 @@ const navContents = [
   { label: "Projects" },
   { label: "Contact" },
 ];
-
