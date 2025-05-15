@@ -3,3 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+.Profile-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+h1 {
+    align-items: center;
+}
+img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd3ff;
+}
+.navs{
+    align-items: center;
+    display: flex;
+    
+}
