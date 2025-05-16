@@ -26,10 +26,19 @@ nav{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
     color: blue;
-    text-decoration: none;
 }
 .image {
     display: flex;
+}
+a {
+    text-decoration: none;
+    align-items: center;
+}
+.icons {
+     padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }

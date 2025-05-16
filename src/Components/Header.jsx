@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectsDiagram, FaEnvelope } from "react-icons/fa"
+import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope } from "react-icons/fa"
 import "./header.css";
 
 // const navContent = [
@@ -34,9 +34,8 @@ function Profile() {
             {navContents.map((item, index) => (
               <a key={index} href={`#${item.label.toLocaleLowerCase()}`}>
                 {item.label}
-                <span>{item.icon} </span>
-                <span>{item.label} </span>
-              </a>
+                <span className="icons">{item.icon} </span>
+               </a>
             ))}
           </nav>
         </div>
@@ -48,10 +47,10 @@ function Profile() {
 export default Profile;
 
 const navContents = [
-  { label: "Home", icoN: <FaHome/>},
+  { label: "Home", icon: <FaHome/>},
   { label: "Skills", icon: <FaCode/> },
   { label: "Education", icon: <FaGraduationCap/> },
   { label: "Blogs", icon: <FaBlog/> },
-  { label: "Projects", icon: <FaProjectsDiagram/>},
+  { label: "Projects", icon: <FaProjectDiagram/>},
   { label: "Contact", icon : <FaEnvelope/> },
 ];
