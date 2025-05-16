@@ -30,7 +30,7 @@ function Profile() {
         <div className="navs">
           <nav>
             {navContents.map((item, index) => (
-              <a key={index} href={`#${item.label.toLocaleLowerCase()}`}>
+              <a key={index} href={`${item.label.toLocaleLowerCase()}`}>
                 {item.label}
               </a>
             ))}
