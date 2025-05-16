@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectsDiagram, FaEnvelope } from "react-icons/fa"
 import "./header.css";
 
 // const navContent = [
@@ -14,6 +15,7 @@ const user = {
 function Profile() {
   return (
     <>
+    
       <div className="Profile-section">
         <div className="image">
           <h1>{user.name}</h1>
@@ -32,6 +34,8 @@ function Profile() {
             {navContents.map((item, index) => (
               <a key={index} href={`#${item.label.toLocaleLowerCase()}`}>
                 {item.label}
+                <span>{item.icon} </span>
+                <span>{item.label} </span>
               </a>
             ))}
           </nav>
@@ -44,10 +48,10 @@ function Profile() {
 export default Profile;
 
 const navContents = [
-  { label: "Home" },
-  { label: "Skills" },
-  { label: "Education" },
-  { label: "Blogs" },
-  { label: "Projects" },
-  { label: "Contact" },
+  { label: "Home", icoN: <FaHome/>},
+  { label: "Skills", icon: <FaCode/> },
+  { label: "Education", icon: <FaGraduationCap/> },
+  { label: "Blogs", icon: <FaBlog/> },
+  { label: "Projects", icon: <FaProjectsDiagram/>},
+  { label: "Contact", icon : <FaEnvelope/> },
 ];
