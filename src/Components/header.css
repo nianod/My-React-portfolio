@@ -47,12 +47,12 @@ a {
     justify-content: center;
     animation: rotate 5s linear infinite;
 }
-a:hover {
+nav a:hover {
     border-bottom: 2px;
     color: cyan;
     transform: translateY(-3px);
 }
-a::after {
+nav a::after {
    content: "";
      position: absolute;
     bottom: 0;
@@ -62,7 +62,7 @@ a::after {
     transition: 0.3s ease;
     background: linear-gradient(90deg, rgb(51, 241, 102), #cef257);
 }
-a:hover::after {
+nav a:hover::after {
     width: 100%;
 }
 @keyframes rotate {
