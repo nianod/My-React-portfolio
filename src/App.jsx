@@ -1,11 +1,12 @@
  import React from 'react'
  import Profile from './Components/Header' 
- import Counter from './Components/map'
- const App = () => {
+ import Footer from './Components/foots'
+  const App = () => {
    return (
      <div>
        <Profile/>
-      <Counter isLoogedIn= {false} name = "Arnold" />
+      
+      <Footer/>
      </div>
    )
  }

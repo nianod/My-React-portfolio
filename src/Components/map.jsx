@@ -31,14 +31,7 @@
 //         </div>
 //     );
 // }
-
-const Counter = () => {
-    return (
-        props.isLoogedIn ? <h2>Welcome {props.name} </h2> : <h2>Please log in</h2>
-    )
-}
-
-
+ 
 
 
 

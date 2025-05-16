@@ -7,7 +7,7 @@ import "./header.css";
 
 const user = {
   name: "Arnold",
-  imageURL: "3c4813fa70d7f0597c00220179dceb9f.png",
+  imageURL: "/3c4813fa70d7f0597c00220179dceb9f.png",
   imageSize: 50,
 };
 
@@ -30,7 +30,7 @@ function Profile() {
         <div className="navs">
           <nav>
             {navContents.map((item, index) => (
-              <a key={index} href={`${item.label.toLocaleLowerCase()}`}>
+              <a key={index} href={`#${item.label.toLocaleLowerCase()}`}>
                 {item.label}
               </a>
             ))}
