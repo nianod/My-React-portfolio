@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope } from "react-icons/fa"
 import "./header.css";
 
 // const navContent = [
@@ -11,7 +12,7 @@ const user = {
   imageSize: 50,
 };
 
-function Profile() {
+const Header = () => {
   return (
     <>
     
@@ -43,7 +44,8 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Header;
+ 
 
 const navContents = [
   { label: "Home", icon: <FaHome/>},

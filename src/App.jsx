@@ -1,15 +1,15 @@
- import React from 'react'
- import Profile from './Components/Header' 
- import Footer from './Components/foots'
-  const App = () => {
-   return (
-     <div>
-       <Profile/>
-      
+
+import React from 'react'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+
+const App = () => {
+  return (
+    <div>
+      <Header/>
       <Footer/>
-     </div>
-   )
- }
- 
- export default App
- 
+    </div>
+  )
+}
+
+export default App
