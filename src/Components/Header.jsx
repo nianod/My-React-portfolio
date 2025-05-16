@@ -1,5 +1,4 @@
 import React from "react";
-import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope } from "react-icons/fa"
 import "./header.css";
 
 // const navContent = [

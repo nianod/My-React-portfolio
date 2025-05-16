@@ -35,10 +35,41 @@ nav{
 a {
     text-decoration: none;
     align-items: center;
+    font-size: 20px;
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3 ease;
 }
 .icons {
      padding: 5px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    animation: rotate 5s linear infinite;
+}
+a:hover {
+    border-bottom: 2px;
+    color: cyan;
+    transform: translateY(-3px);
+}
+a::after {
+   content: "";
+     position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    transition: 0.3s ease;
+    background: linear-gradient(90deg, rgb(51, 241, 102), #cef257);
+}
+a:hover::after {
+    width: 100%;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
