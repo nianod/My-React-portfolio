@@ -3,9 +3,8 @@ const FooterContents = [
     { icon: <FaGithub/>, URL: "https://github.com/nianod" },
     { icon: <FaLinkedin/>, URL: "https://linkedin.com/in/arnold-wanza-b51654330" },
     { icon: <FaWhatsapp/>, URL: "https://wa.link/ft2zsu"},
-    { icon: <FaTwitter/>, url: "https://x.com/Itsarnold001" },
-    { icon: <FaInstagram/>, URL: "https://www.instagram.com/ar_nold._" },
-    { icon: <FaDiscord/> }
+    { icon: <FaTwitter/>, URL: "https://x.com/Itsarnold001" },
+    { icon: <FaInstagram/>, URL: "https://www.instagram.com/ar_nold._" }
 ]
 const roots = {
     name: "Arnold",
@@ -26,6 +25,7 @@ const Footer = () => {
         <div className="terms">
             <h4>&copy; {roots.year} {roots.name} </h4>
             <h5>{roots.rights}</h5>
+ 
         </div>
       </div>    
         </>

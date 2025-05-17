@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope } from "react-icons/fa"
-import "./header.css";
+// import "./header.css";
 
 // const navContent = [
 //     {label: "Home", to: "/", icon: Home}
@@ -11,38 +11,38 @@ const user = {
   imageURL: "/3c4813fa70d7f0597c00220179dceb9f.png",
   imageSize: 50,
 };
-
 const Header = () => {
   return (
-    <>
-    
-      <div className="Profile-section">
-        <div className="image">
-          <h1>{user.name}</h1>
+    <header className="bg-fuchsia-500  p-4 shadow-md">
+      <div className="flex justify-between items-center">
+        {/* User Info */}
+        <div className="flex items-center gap-4">
           <img
-            className="ownerimage"
+            className="w-12 h-12 object-cover rounded-full border-2 border-white"
             src={user.imageURL}
             alt={"photo of " + user.name}
-            style={{
-              width: user.imageSize,
-              height: user.imageSize,
-            }}
           />
+          <h1 className="text-white text-xl font-bold">{user.name}</h1>
         </div>
-        <div className="navs">
-          <nav>
-            {navContents.map((item, index) => (
-              <a key={index} href={`#${item.label.toLocaleLowerCase()}`}>
-                {item.label}
-                <span className="icons">{item.icon} </span>
-               </a>
-            ))}
-          </nav>
-        </div>
+
+        {/* Navigation */}
+        <nav className="flex gap-6">
+          {navContents.map((item, index) => (
+            <a
+              key={index}
+              href={`#${item.label.toLowerCase()}`}
+              className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors"
+            >
+              <span>{item.icon}</span>
+              <span>{item.label}</span>
+            </a>
+          ))}
+        </nav>
       </div>
-    </>
+    </header>
   );
-}
+};
+
 
 export default Header;
  
