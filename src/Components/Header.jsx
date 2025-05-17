@@ -18,7 +18,7 @@ const Header = () => {
         {/* User Info */}
         <div className="flex items-center gap-4">
           <img
-            className="w-12 h-12 object-cover rounded-full border-2 border-white"
+            className="w-10 h-10 object-cover rounded-full border-2 border-white"
             src={user.imageURL}
             alt={"photo of " + user.name}
           />
@@ -31,10 +31,10 @@ const Header = () => {
             <a
               key={index}
               href={`#${item.label.toLowerCase()}`}
-              className="flex items-center gap-2 text-white hover:text-yellow-300 transition-colors"
+              className="flex items-center font-bold gap-1 text-white hover:text-blue-500 transition-colors"
             >
-              <span>{item.icon}</span>
               <span>{item.label}</span>
+              <span className="animate-spin">{item.icon}</span>
             </a>
           ))}
         </nav>
