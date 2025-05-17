@@ -11,4 +11,19 @@
             transform: rotate(360deg);
         }
     }
+    .links {
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        padding: 5px;
+        color: blue;
+        transition: all 0.3s ease;
+    }
+    .links:hover {
+        cursor: pointer;
+        transform: translateY(-3px) scale(1.1);
+        background: gainsboro;
+    }
+}
+.mains {
+ justify-content: space-between;
 }

@@ -13,7 +13,7 @@ const user = {
 };
 const Header = () => {
   return (
-    <header className="bg-fuchsia-500  p-4 shadow-md">
+    <header className="bg-fuchsia-500  p-4 shadow-md rounded-b-xl">
       <div className="flex justify-between items-center">
         {/* User Info */}
         <div className="flex items-center gap-4">
