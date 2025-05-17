@@ -34,7 +34,7 @@ const Header = () => {
               className="flex items-center font-bold gap-1 text-white hover:text-blue-500 transition-colors"
             >
               <span>{item.label}</span>
-              <span className="animate-spin">{item.icon}</span>
+              <span className="Round text-black">{item.icon}</span>
             </a>
           ))}
         </nav>
