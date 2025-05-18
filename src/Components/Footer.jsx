@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="flex justify-center mt-5">
         <div className="w-1/2 bg-blue-600 h-px"></div>
       </div>
-      <div className="flex bg-green-400 mt-3 flex-col items-center p-5">
+      <div className="flex bg-green-400 mt-3 flex-col items-center fixed w-full bottom-0 z-40 text-center py-2">
         <div className="flex gap-3 text-xl hover:transition-colors text-2xl">
             {FooterContents.map((item, index) => (
                 <a className="links" key={index} href={item.URL} target="_blank" rel="noopener noreferrer">{item.icon} </a>

@@ -1,10 +1,5 @@
 import React from "react";
-import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope } from "react-icons/fa"
-// import "./header.css";
-
-// const navContent = [
-//     {label: "Home", to: "/", icon: Home}
-// ]
+import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope, FaMoon } from "react-icons/fa"
 
 const user = {
   name: "Arnold",
@@ -12,8 +7,11 @@ const user = {
   imageSize: 50,
 };
 const Header = () => {
+  // const modeChange = () => {
+  //   alert("changing,,,,")
+  // }
   return (
-    <header className="bg-fuchsia-500  p-4 shadow-md rounded-b-xl">
+    <header className="bg-fuchsia-500  p-2 shadow-md rounded-b-xl  fixed top-0 w-full z-50">
       <div className="flex justify-between items-center">
         {/* User Info */}
         <div className="flex items-center gap-4">
@@ -54,4 +52,5 @@ const navContents = [
   { label: "Blogs", icon: <FaBlog/> },
   { label: "Projects", icon: <FaProjectDiagram/>},
   { label: "Contact", icon : <FaEnvelope/> },
+  { label: "mode", icon: <FaMoon/>}
 ];

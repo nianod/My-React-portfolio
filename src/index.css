@@ -27,3 +27,25 @@
 .mains {
  justify-content: space-between;
 }
+.myimage {
+    border: 2px transparent;
+    box-shadow:            0 0 10px rgb(245,9, 131);
+    box-shadow: 0 0 10px rgb(73, 232, 120);
+    box-shadow: 0 0 10px rgb(29, 61, 239);
+    animation: glow 2s linear infinite;
+    padding: 5px;
+}
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 
+            0 0 10px rgb(245,9, 131),
+            0 0 10px rgb(73, 232, 120),
+            0 0 10px rgb(29, 61, 239);
+    }
+    50% {
+        box-shadow: 
+            0 0 10px rgb(245,9, 131),
+            0 0 10px rgb(73,  232, 120),
+            0 0 10px rgb(29, 61, 239);
+    }
+}

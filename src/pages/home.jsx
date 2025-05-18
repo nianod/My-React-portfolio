@@ -18,8 +18,8 @@ const movingText = [
 
 const Home = () => {
   return (
-    <div>
-      <img className='w-30 h-30 object-cover rounded-full'
+    <div className='m-20'>
+      <img className='myimage w-30 h-30 object-cover rounded-full'
         src= {users.imageUrl} 
         alt= {"Photo of "+ users.name} 
       />
