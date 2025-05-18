@@ -1,10 +1,10 @@
-
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import './index.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
+import Skills from './pages/Skills'
+import Education from './pages/Education'
+import Blogs from './pages/Blogs'
+import Projects from './pages/projects'
+import Contact from './pages/Contact'
 import Layout from './Components/layout'
 
 const App = () => {
