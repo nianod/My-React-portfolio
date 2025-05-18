@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope, FaMoon } from "react-icons/fa"
 
 const user = {
@@ -7,9 +8,7 @@ const user = {
   imageSize: 50,
 };
 const Header = () => {
-  // const modeChange = () => {
-  //   alert("changing,,,,")
-  // }
+  
   return (
     <header className="bg-fuchsia-500  p-2 shadow-md rounded-b-xl  fixed top-0 w-full z-50">
       <div className="flex justify-between items-center">
@@ -25,15 +24,15 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="flex gap-6">
-          {navContents.map((item, index) => (
-            <a
-              key={index}
-              href={`#${item.label.toLowerCase()}`}
+          {navContents.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
               className="flex items-center font-bold gap-1 text-white hover:text-blue-500 transition-colors"
             >
               <span>{item.label}</span>
               <span className="Round text-black">{item.icon}</span>
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
@@ -46,11 +45,11 @@ export default Header;
  
 
 const navContents = [
-  { label: "Home", icon: <FaHome/>},
-  { label: "Skills", icon: <FaCode/> },
-  { label: "Education", icon: <FaGraduationCap/> },
-  { label: "Blogs", icon: <FaBlog/> },
-  { label: "Projects", icon: <FaProjectDiagram/>},
-  { label: "Contact", icon : <FaEnvelope/> },
-  { label: "mode", icon: <FaMoon/>}
+  { label: "Home", icon: <FaHome/>, path: "/"},
+  { label: "Skills", icon: <FaCode/>, path: "/skills" },
+  { label: "Education", icon: <FaGraduationCap/>, path: "/education" },
+  { label: "Blogs", icon: <FaBlog/>, path: "/blogs" },
+  { label: "Projects", icon: <FaProjectDiagram/>, path: "/projects"},
+  { label: "Contact", icon : <FaEnvelope/>, path: "/contact" }
+  // { label: "mode", icon: <FaMoon/>}
 ];
