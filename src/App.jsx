@@ -9,13 +9,18 @@ import Layout from './Components/layout'
 
 const App = () => {
   return(
-    <Layout>
+    <Router>
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/Header' element={<Header/>} />
-        <Route path='/Footer' element={<Footer/>} />
+        <Route path="/" element={<Layout />}>
+          <Route index element = {<Home />} /> 
+          <Route path="skills" element={<Skills />} />
+          <Route path="education" element={<Education />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
       </Routes>
-    </Layout>
+    </Router>
   )
 }
 
