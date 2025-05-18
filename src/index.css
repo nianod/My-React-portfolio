@@ -49,3 +49,20 @@
             0 0 10px rgb(29, 61, 239);
     }
 }
+.Navigation:hover {
+    transform: translateY(-3px);
+    color: aquamarine;
+}
+.Navigation::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 0.3s ease;
+    background: linear-gradient(90deg, rgb(51, 241, 102), #cef257);
+}
+.Navigation:hover::after {
+    width: 100%;
+}

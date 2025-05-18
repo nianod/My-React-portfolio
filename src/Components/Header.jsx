@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="bg-fuchsia-500  p-2 shadow-md rounded-b-xl  fixed top-0 w-full z-50">
       <div className="flex justify-between items-center">
-        {/* User Info */}
+  
         <div className="flex items-center gap-4">
           <img
             className="w-10 h-10 object-cover rounded-full border-2 border-white"
@@ -28,7 +28,7 @@ const Header = () => {
             <Link
               key={item.path}
               to={item.path}
-              className="flex items-center font-bold gap-1 text-white hover:text-blue-500 transition-colors"
+              className="Navigation flex items-center font-bold gap-1 text-white"
             >
               <span>{item.label}</span>
               <span className="Round text-black">{item.icon}</span>
