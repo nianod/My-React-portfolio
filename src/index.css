@@ -66,3 +66,7 @@
 .Navigation:hover::after {
     width: 100%;
 }
+.whit {
+    white-space: pre-line;
+    color: aqua;
+}
