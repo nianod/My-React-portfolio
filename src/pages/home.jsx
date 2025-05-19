@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 
 const users = {
   name: "Arnold's TECH",
-  job: "Transforming Ideas \ into code",
   imageUrl: "/arnold.jpg",
 };
 
@@ -54,7 +53,7 @@ const Home = () => {
         src={users.imageUrl}
         alt={"Photo of " + users.name}
       />
-       <h1 className="text-blue-500 font-bold text-4xl"> {users.name} </h1>
+       <h1 className="text-blue-500 font-bold text-4xl"> <p>Transforming ideas</p> </h1>
       <h2>
         {text}
         <span>|</span>
