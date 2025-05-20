@@ -53,13 +53,17 @@ const Home = () => {
         src={users.imageUrl}
         alt={"Photo of " + users.name}
       />
-       <h1 className="text-blue-500 font-bold text-4xl"> <p>Transforming ideas</p> </h1>
+       <h1 className="text-blue-500 font-bold text-4xl"> {users.name} </h1>
       <h2>
         {text}
         <span>|</span>
       </h2>
-     
-      <p className="whit font-bold text-2xl ">{users.job}</p>
+      <div className="job">
+        <span className="job-first">Transforming</span><br />
+        <span className="job-second">Ideas into Code</span>
+      </div>
+
+      
     </div>
   );
 };
