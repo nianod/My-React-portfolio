@@ -1,31 +1,18 @@
 import icons from './skill.icons'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { skillTitle, dbs, frameworks, languages } from "./skilldummy"
 import { FaJs, FaReact, FaPython, FaHtml5, FaCss3, FaNodeJs } from 'react-icons/fa'
 
 
-const Skills = ( {text} ) => {
-   const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let currentIndex = 0;
-    const typingSpeed = 100; 
-
-    const type = () => {
-      if (currentIndex <= text.length) {
-        setDisplayedText(text.substring(0, currentIndex));
-        currentIndex++;
-        setTimeout(type, typingSpeed);
-      }
-    };
-    type();
-  }, [text])
+const Skills = () => {
+  
   return (
   <>  
   <div className='pb-20'>
      <div className='pb-20 mt-15 flex justify-center items-center flex-col'>
-      <h1 className='text-blue-400 font-bold flex justify-center items-center text-xl underline'> Self-Taught-Skills</h1>
-      <p className='EXP text-white'> {skillTitle.titl} </p>
+      <h1 className='flex justify-center items-center text-4xl font-bold text-blue-400 mb-2 '> Self-Taught-Skills</h1>
+       <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
+      <p className='EXP text-white mt-5'> {skillTitle.titl} </p>
     </div>
     <div className='langs flex flex-col items-center justify-center'>
       <h1 className='text-blue-400 underline font-bold text-xl'>Programming Languages</h1>
