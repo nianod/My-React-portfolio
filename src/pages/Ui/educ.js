@@ -4,9 +4,10 @@ const softDev = {
     date: "2024-todate",
 }
 const university ={
-    school: "Mery University of science and Technology",
-    rank: "Information Technology",
-    date: "2024-2028"
+    school: "Meru University of science and Technology",
+    rank: "Bachelor of Information Technology",
+    date: "2024-2028",
+    contribution: "This is where my innovation was founded"
 }
 const codespace = {
     school: "Codespace online Bootcamp",

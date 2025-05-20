@@ -27,7 +27,8 @@ const Education = () => {
     type();
    }, [])
   return (
-    <>
+    
+    <div className="pb-20">
       <div className=" py-4 flex flex-col items-center mt-10">
           <h2 className="text-4xl font-bold text-blue-400 mb-2">My Education</h2>
           <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
@@ -37,11 +38,23 @@ const Education = () => {
          <p className="text-center text-white"> {displayedText} </p>
       </div>
       </div>
-      <div>
-        <h1> {university.school} </h1>
-        <h3 > {university.rank}</h3>
+      <div data-aos="fade-left" className="flex items-center justify-center flex-col bg-black text-white w-fit m-auto mt-6 p-5 rounded-lg ">
+        <h1 className="bg-blue-800 p-2 rounded-lg text-xl font-semibold"> {university.school} </h1>
+        <h3 className="font-bold"> {university.rank} | {university.date}</h3>
+        <i> {university.contribution} </i>
       </div>
-    </>
+      <div data-aos="flip-up" className="flex items-center justify-center flex-col bg-black text-white w-fit m-auto mt-6 p-5 rounded-lg ">
+        <h1 className="bg-blue-800 p-2 rounded-lg text-xl font-semibold"> {softDev.school} </h1>
+        <h3 className="font-bold"> {university.rank} | {softDev.date}</h3>
+        <i> {softDev.contribution} </i>
+      </div>
+      <div data-aos="flip-down" className="flex items-center justify-center flex-col bg-black text-white w-fit m-auto mt-6 p-5 rounded-lg ">
+        <h1 className="bg-blue-800 p-2 rounded-lg text-xl font-semibold"> {codespace.school} </h1>
+        <h3 className="font-bold"> {university.rank} | {codespace.date}</h3>
+        <i> {codespace.contribution} </i>
+      </div>
+      </div>
+    
   )
 }
 

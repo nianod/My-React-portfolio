@@ -96,7 +96,7 @@ const Home = () => {
             </b>
             <div
               className="swing text-fuchsia-500 border p-4 rounded-xl mt-15 data"
-              data-aos="fade-down"
+              data-aos="flip-up"
             >
               <b>{awinging.future}</b>
             </div>
