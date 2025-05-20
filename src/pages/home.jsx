@@ -47,7 +47,9 @@ const Home = () => {
     return () => clearTimeout(timeout);
   });
   return (
-    <div className="mt-15">
+    <>
+    <div className="flex justify-between mt-15">
+       <div className="mm">
       <img
         className="myimage w-30 h-30 object-cover rounded-full"
         src={users.imageUrl}
@@ -62,9 +64,22 @@ const Home = () => {
         <span className="job-first">Transforming</span><br />
         <span className="job-second">Ideas into Code</span>
       </div>
-
-      
     </div>
+    <div className="about max-w-xs">
+        <p>I'm a self-taught developer from Kenya. I'm currently in my first year studying Information Technology at Meru University.
+          I specialize in building responsive, accessible, scalable and performant digital experiences that make a great impact.
+          I blend technology with passion to create solutions that shine. My approach combines technical skills with business acumen gained from my studies.
+          <div className="swing">
+              <b>Arnold crafts Digital experiences that inspire and transform</b>
+          </div>
+          <b>My journey towards Tech is driven by curiosity and the desire to know how to and to create meaningful solutions which are digitized</b>
+          <div className="swing">
+              <b>Coding and Progrmming to the future...</b>
+          </div>
+      </p>
+    </div>
+    </div>
+    </>
   );
 };
 
