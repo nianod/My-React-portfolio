@@ -126,3 +126,14 @@ body {
     width: 50px;
     height: 50px;
 }
+.langs h3 {
+    color: white;
+}
+.langs, .frameworks, .dabs {
+  border: 1px solid white;
+    width: fit-content;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    gap: 10px;
+}
