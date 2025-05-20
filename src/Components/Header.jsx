@@ -4,7 +4,8 @@ import { FaHome,FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope, F
 
 const user = {
   name: "Arnold",
-  imageURL: "/3c4813fa70d7f0597c00220179dceb9f.png",
+  prof: "/3c4813fa70d7f0597c00220179dceb9f.png",
+  imagUrl: "/public/Screenshot 2025-05-01 181530.png",
   imageSize: 50,
 };
 const Header = () => {
@@ -16,7 +17,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <img
             className="w-10 h-10 object-cover rounded-full border-2 border-white"
-            src={user.imageURL}
+            src={user.imagUrl}
             alt={"photo of " + user.name}
           />
           <h1 className="text-white text-xl font-bold">{user.name}</h1>

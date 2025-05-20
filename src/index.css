@@ -24,29 +24,36 @@
         background: gainsboro;
     }
 }
+body {
+    background: #242424;
+}
 .mains {
  justify-content: space-between;
 }
 .myimage {
     border: 2px transparent;
-    box-shadow:            0 0 10px rgb(245,9, 131);
-    box-shadow: 0 0 10px rgb(73, 232, 120);
-    box-shadow: 0 0 10px rgb(29, 61, 239);
+    box-shadow: 0 0 10px rgba(245,9, 131,0.7);
+    box-shadow: 0 0 10px rgba(73, 232, 120,0.6);
+    box-shadow: 0 0 10px rgba(29, 61, 239,0.6);
+    box-shadow: 0 0 10px rgba(231,56,187,0.8);
     animation: glow 2s linear infinite;
     padding: 5px;
 }
 @keyframes glow {
     0%, 100% {
         box-shadow: 
-            0 0 10px rgb(245,9, 131),
-            0 0 10px rgb(73, 232, 120),
-            0 0 10px rgb(29, 61, 239);
+            0 0 10px rgba(245,9, 131,0.7),
+            0 0 10px rgba(73, 232, 120,0.6),
+            0 0 10px rgba(29, 61, 239,0.6),
+            0 0 10px rgba(231,56,187,0.8);
     }
     50% {
         box-shadow: 
-            0 0 10px rgb(245,9, 131),
-            0 0 10px rgb(73,  232, 120),
-            0 0 10px rgb(29, 61, 239);
+            0 0 10px rgba(245,9, 131,0.7),
+            0 0 10px rgba(73,  232, 120,0.6),
+            0 0 10px rgba(29, 61, 239,0.6),
+            0 0 10px rgba(231,56,187,0.8);
+
     }
 }
 .Navigation:hover {
@@ -74,10 +81,36 @@
 
 .job-first {
   font-size: 30px;
-  color: black;
+  color: rgb(255, 254, 254);
 }
-
+.text {
+    color: aqua;
+}
 .job-second {
   font-size: 30px;
   color: rgb(90, 90, 236);
 }
+.animating {
+    animation: rotate 10s linear infinite;
+    box-shadow: 
+     0 0 10px 5px rgba(0, 255, 255, 0.5),
+     0 0 20px 10px rgba(255, 0, 255, 0.3),
+     0 0 30px 15px rgba(0, 255, 255, 0.2),
+     0 0 30px 15px rgba(244, 0, 255, 0.4);
+}
+@keyframes rotate {
+    from {
+        transition: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.swing {
+    box-shadow: 0 0 10px rgba(116, 116, 116, 0.6);
+    background: white;
+    animation: updown 2s infinite ease-in-out;
+}
+  @keyframes updown {
+    0%, 100% { transform: translateY(0); } /* Normal position */
+    50% { transform: translateY(-10px); }}
