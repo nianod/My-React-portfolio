@@ -2,6 +2,7 @@ const softDev = {
     school: "Meru WEB Development club",
     rank: "Teamwork, Collaboration and Peer teaching",
     date: "2024-todate",
+    contribution: "Where my leadership and team-building skills were refined"
 }
 const university ={
     school: "Meru University of science and Technology",
@@ -12,6 +13,7 @@ const university ={
 const codespace = {
     school: "Codespace online Bootcamp",
     rank: "Full stack development",
-    date: "2025-2026"
+    date: "i 2025-2026",
+    contribution: "The place where innovation met real-world application"
 }
 export {softDev, university, codespace}

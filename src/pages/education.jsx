@@ -40,17 +40,17 @@ const Education = () => {
       </div>
       <div data-aos="fade-left" className="flex items-center justify-center flex-col bg-black text-white w-fit m-auto mt-6 p-5 rounded-lg ">
         <h1 className="bg-blue-800 p-2 rounded-lg text-xl font-semibold"> {university.school} </h1>
-        <h3 className="font-bold"> {university.rank} | {university.date}</h3>
+        <h3 className="font-bold"> {university.rank} | <i className="font-light">{university.date}</i> </h3>
         <i> {university.contribution} </i>
       </div>
       <div data-aos="flip-up" className="flex items-center justify-center flex-col bg-black text-white w-fit m-auto mt-6 p-5 rounded-lg ">
         <h1 className="bg-blue-800 p-2 rounded-lg text-xl font-semibold"> {softDev.school} </h1>
-        <h3 className="font-bold"> {university.rank} | {softDev.date}</h3>
+        <h3 className="font-bold"> {softDev.rank} | <i className="font-light">{softDev.date}</i></h3>
         <i> {softDev.contribution} </i>
       </div>
       <div data-aos="flip-down" className="flex items-center justify-center flex-col bg-black text-white w-fit m-auto mt-6 p-5 rounded-lg ">
         <h1 className="bg-blue-800 p-2 rounded-lg text-xl font-semibold"> {codespace.school} </h1>
-        <h3 className="font-bold"> {university.rank} | {codespace.date}</h3>
+        <h3 className="font-bold"> {codespace.rank} | <i className="font-light">{codespace.date}</i> </h3>
         <i> {codespace.contribution} </i>
       </div>
       </div>
