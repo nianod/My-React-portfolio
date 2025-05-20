@@ -1,5 +1,10 @@
  
 import React, { useState, useEffect } from "react";
+import {
+  softDev,
+  codespace,
+  university
+} from './Ui/educ'
 
 const educationT = {
   message: "While I don't have a traditional academic background in this field, my journey has been driven by curiosity, discipline, and a passion for continuous learning. Through self-guided study, online courses, hands-on projects, and real-world problem-solving, I’ve built a strong foundation and practical skills that reflect my commitment to growth and excellence|"
@@ -31,6 +36,10 @@ const Education = () => {
         <div className=" max-w-md" >
          <p className="text-center text-white"> {displayedText} </p>
       </div>
+      </div>
+      <div>
+        <h1> {university.school} </h1>
+        <h3 > {university.rank}</h3>
       </div>
     </>
   )
