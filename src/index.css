@@ -112,7 +112,7 @@ body {
     animation: updown 2s infinite ease-in-out;
 }
   @keyframes updown {
-    0%, 100% { transform: translateY(0); } /* Normal position */
+    0%, 100% { transform: translateY(0); }  
     50% { transform: translateY(-10px); }}
 
  .EXP {
@@ -126,14 +126,39 @@ body {
     width: 50px;
     height: 50px;
 }
-.langs h3 {
+.langs, .frameworks, .dabs h3 {
     color: white;
 }
 .langs, .frameworks, .dabs {
-  border: 1px solid white;
-    width: fit-content;
+     width: fit-content;
     justify-content: center;
-    margin: auto;
+    margin: 15px auto;
     padding: 10px;
     gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 10px rgba(232, 230, 230, 0.8);
+    animation: side 2s infinite ease-in-out;
+}
+.single-language, .frame, .database {
+    align-items: center;
+    padding: 5px;
+    height: fit-content;
+    box-shadow: 0px 8px 5px rgba(33, 126, 197, 0.9);
+    animation: float 2s infinite ease-in-out;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes side {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
 }

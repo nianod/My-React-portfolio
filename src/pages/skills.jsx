@@ -1,13 +1,29 @@
 import icons from './skill.icons'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { skillTitle, dbs, frameworks, languages } from "./skilldummy"
 import { FaJs, FaReact, FaPython, FaHtml5, FaCss3, FaNodeJs } from 'react-icons/fa'
 
 
-const Skills = () => {
+const Skills = ( {text} ) => {
+   const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingSpeed = 100; 
+
+    const type = () => {
+      if (currentIndex <= text.length) {
+        setDisplayedText(text.substring(0, currentIndex));
+        currentIndex++;
+        setTimeout(type, typingSpeed);
+      }
+    };
+    type();
+  }, [text])
   return (
   <>  
-    <div className='pb-20 mt-15 flex justify-center items-center flex-col'>
+  <div className='pb-20'>
+     <div className='pb-20 mt-15 flex justify-center items-center flex-col'>
       <h1 className='text-blue-400 font-bold flex justify-center items-center text-xl underline'> Self-Taught-Skills</h1>
       <p className='EXP text-white'> {skillTitle.titl} </p>
     </div>
@@ -40,8 +56,8 @@ const Skills = () => {
       </div>
     </div>
     </div>
-    <div className='frameworks flex flex-col items-center justify-center mb-20'>
-      <h1 className='text-blue-400 underline font-bold text-xl'>Frameworks & Liblaries</h1>
+    <div className='frameworks flex flex-col items-center justify-center'>
+      <h1 className='text-blue-400 underline font-bold text-xl'>Frameworks & Libraries</h1>
       <div className='flex gap-5'>
         <div className='frame'>
         <img className='iconImg' src={icons.react} 
@@ -72,8 +88,8 @@ const Skills = () => {
       <div className='flex gap-5'>
         <div className='database'>
         <img className='iconImg' src={icons.supabase} 
-         alt={dbs.supabase} />
-        <h3>{dbs.supabase} </h3> 
+         alt={dbs.Supa} />
+        <h3>{dbs.Supa} </h3> 
       </div>
       <div className='database'>
         <img className='iconImg' src={icons.mongo} 
@@ -82,6 +98,7 @@ const Skills = () => {
       </div>
     </div>
     </div>
+  </div>
 
   </>  
   )
