@@ -1,17 +1,18 @@
-import { use } from "react";
 import React, { useState, useEffect } from "react";
 import awinging from "./dummy";
+
+
 
 const users = {
   name: "Arnold's TECH",
   imageUrl: "/arnold.jpg",
-  imageII: "/public/3c4813fa70d7f0597c00220179dceb9f.png"
+  imageII: "/public/3c4813fa70d7f0597c00220179dceb9f.png",
 };
 
 const movingText = [
   "Hello my name is Arnold...",
-  "A fronted Developer...",
-  "Coding and programming Hobyyst...",
+  "A frontend Developer...",
+  "Coding and programming Hobbyist...",
   "I like sharing my knowledge...",
   "Can we collaborate?",
 ];
@@ -20,7 +21,7 @@ const Home = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [speed, setSpeed] = useState(150);
+  const [speed] = useState(150);
 
   useEffect(() => {
     const currentString = movingText[index];
@@ -48,48 +49,67 @@ const Home = () => {
     }
 
     return () => clearTimeout(timeout);
-  });
+  }, [text, isDeleting, index, speed]);
+
   return (
     <>
-    <div className="flex justify-between pb-20 mt-15 p-5">
-       <div className="max-w-sm">
-      <img
-        className="myimage w-50 h-50 object-cover rounded-full"
-        src={users.imageUrl}
-        alt={"Photo of " + users.name}
-      />
-       <h1 className="text-blue-500 font-bold text-4xl"> {users.name} </h1>
-      <h2 className="text text-xl">
-        {text}
-        <span>|</span>
-      </h2>
-      <div className="job">
-        <span className="job-first">Transforming</span><br />
-        <span className="job-second">Ideas into Code</span>
-      </div>
-    </div>
-    <div className="about max-w-sm items-center ml-5 ">
-        <h2 className="font-bold text-2xl text-blue-400 underline flex items-center justify-center">About me</h2>
-        <p className="text-white mt-3">I'm a self-taught developer from Kenya. I'm currently in my first year studying Information Technology at Meru University.
-          I specialize in building responsive, accessible, scalable and performant digital experiences that make a great impact.
-          I blend technology with passion to create solutions that shine. My approach combines technical skills with business acumen gained from my studies.
-          <div className="swing text-fuchsia-500 border-1 p-4 rounded-xl mt-15 mb-5">
-              <b> {awinging.digital} </b>
+      <div className="flex justify-between pb-20 mt-15 p-5">
+        <div className="max-w-sm">
+          <img
+            className="myimage w-[200px] h-[200px] object-cover rounded-full"
+            src={users.imageUrl}
+            alt={"Photo of " + users.name}
+          />
+          <h1 className="text-blue-500 font-bold text-4xl">{users.name}</h1>
+          <h2 className="text text-xl">
+            {text}
+            <span>|</span>
+          </h2>
+          <div className="job">
+            <span className="job-first">Transforming</span>
+            <br />
+            <span className="job-second">Ideas into Code</span>
           </div>
-          <b className="mt-20"> My journey towards Tech is driven by curiosity and the desire to know how to and to create meaningful solutions which are digitized</b>
-          <div className="swing text-fuchsia-500 border-1 p-4 rounded-xl mt-15">
-              <b> {awinging.future} </b>
-          </div>
-      </p>
-    </div>
-      <div className="flex justify-center items-center h-screen"> 
-        <img className="animating w-[200px] h-[200px] object-cover rounded-full mr-5"
-         src= {users.imageII}
-         alt={"photo of "+ users.name}
-        /> 
+        </div>
 
+        <div className="about max-w-sm items-center ml-5">
+          <h2 className="font-bold text-2xl text-blue-400 underline flex items-center justify-center">
+            About me
+          </h2>
+          <div className="text-white mt-3">
+            <p>
+              I'm a self-taught developer from Kenya. I'm currently in my first
+              year studying Information Technology at Meru University.
+              I specialize in building responsive, accessible, scalable and
+              performant digital experiences that make a great impact.
+              I blend technology with passion to create solutions that shine.
+              My approach combines technical skills with business acumen gained
+              from my studies.
+            </p>
+            <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-15 mb-5">
+              <b>{awinging.digital}</b>
+            </div>
+            <b className="mt-20 block">
+              My journey towards Tech is driven by curiosity and the desire to
+              know how to and to create meaningful solutions which are digitized
+            </b>
+            <div
+              className="swing text-fuchsia-500 border p-4 rounded-xl mt-15 data"
+              data-aos="fade-down"
+            >
+              <b>{awinging.future}</b>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center h-screen">
+          <img
+            className="animating w-[200px] h-[200px] object-cover rounded-full mr-5"
+            src={users.imageII}
+            alt={"photo of " + users.name}
+          />
+        </div>
       </div>
-    </div>
     </>
   );
 };

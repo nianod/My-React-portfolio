@@ -114,3 +114,11 @@ body {
   @keyframes updown {
     0%, 100% { transform: translateY(0); } /* Normal position */
     50% { transform: translateY(-10px); }}
+
+ .EXP {
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+ }   
