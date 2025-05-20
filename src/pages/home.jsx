@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import awinging from "./dummy";
+import awinging from "./Uidummy";
 
 
 

@@ -1,6 +1,6 @@
 import icons from './skill.icons'
 import React from 'react'
-import { skillTitle, dbs, frameworks, languages } from "./skilldummy"
+import { skillTitle, dbs, frameworks, languages } from "./Uiskilldummy"
 import { FaJs, FaReact, FaPython, FaHtml5, FaCss3, FaNodeJs } from 'react-icons/fa'
 
 
