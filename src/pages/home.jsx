@@ -1,5 +1,6 @@
 import { use } from "react";
 import React, { useState, useEffect } from "react";
+import awinging from "./dummy";
 
 const users = {
   name: "Arnold's TECH",
@@ -48,7 +49,7 @@ const Home = () => {
   });
   return (
     <>
-    <div className="flex justify-between mt-15">
+    <div className="flex justify-between mt-15 pb-29">
        <div className="mm">
       <img
         className="myimage w-30 h-30 object-cover rounded-full"
@@ -65,16 +66,17 @@ const Home = () => {
         <span className="job-second">Ideas into Code</span>
       </div>
     </div>
-    <div className="about max-w-xs">
+    <div className="about max-w-xs items-center ">
+        <h2 className="font-bold text-2xl text-blue-800 underline flex items-center justify-center">About me</h2>
         <p>I'm a self-taught developer from Kenya. I'm currently in my first year studying Information Technology at Meru University.
           I specialize in building responsive, accessible, scalable and performant digital experiences that make a great impact.
           I blend technology with passion to create solutions that shine. My approach combines technical skills with business acumen gained from my studies.
-          <div className="swing">
-              <b>Arnold crafts Digital experiences that inspire and transform</b>
+          <div className="swing text-fuchsia-500 border-1 p-4 rounded-xl">
+              <b> {awinging.digital} </b>
           </div>
           <b>My journey towards Tech is driven by curiosity and the desire to know how to and to create meaningful solutions which are digitized</b>
-          <div className="swing">
-              <b>Coding and Progrmming to the future...</b>
+          <div className="swing text-fuchsia-500 border-1 p-4 rounded-xl">
+              <b> {awinging.future} </b>
           </div>
       </p>
     </div>
