@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from 'react'
 
 
-let handOnProjects = {
+let handOnProjects = [
+  {label: "online Management", URL: "https://online-renting-six.vercel.app/"},
+   {label: "globa Info",URL: "https://github.com/nianod/See-Global-info"},
+   {label: "Lottery Game" , URL: "https://github.com/nianod/lottery-game"}
   
-}
+]
 const Projects = () => {
       const [displayedText, setDisplayedText] = useState("");
   
@@ -23,11 +26,26 @@ const Projects = () => {
       type();
      }, [])
   return (
+    <>
     <div className='mt-20 flex flex-col items-center'>
       <h1 className='flex justify-center items-center text-4xl font-bold text-blue-400 mb-2 '> My Projects</h1>
        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
        <p className='text-white text-center'> {displayedText} </p>
     </div>
+    <div>
+        {handOnProjects.map((item, index) => (
+          <a 
+          href={item.URL}
+          key={index} 
+          target='_blank'
+          rel='noopener noreferrer'
+          >
+          <h2>{item.label}</h2>
+          <button>view Project</button>
+          </a>
+        ))}
+    </div>
+   </> 
   )
 }
 
