@@ -1,14 +1,13 @@
-import icons from './skill.icons'
-import React from 'react'
-import { skillTitle, dbs, frameworks, languages } from "./Uiskilldummy"
-import { FaJs, FaReact, FaPython, FaHtml5, FaCss3, FaNodeJs } from 'react-icons/fa'
+import icons from './Ui/skill.icons'
+import { skillTitle, dbs, frameworks, languages } from "./Ui/skilldummy"
+
 
 
 const Skills = () => {
   
   return (
   <>  
-  <div className='pb-20'>
+  <div data-aos="fade-left" className='pb-20'>
      <div className='pb-20 mt-15 flex justify-center items-center flex-col'>
       <h1 className='flex justify-center items-center text-4xl font-bold text-blue-400 mb-2 '> Self-Taught-Skills</h1>
        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
