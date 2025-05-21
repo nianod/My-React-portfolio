@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react'
 
 
 let handOnProjects = [
-  {label: "online Management", URL: "https://online-renting-six.vercel.app/"},
-   {label: "globa Info",URL: "https://github.com/nianod/See-Global-info"},
-   {label: "Lottery Game" , URL: "https://github.com/nianod/lottery-game"}
+  {label: "Online Management", URL: "https://online-renting-six.vercel.app/", photo: "/public/Screenshot 2025-05-21 153717.png"},
+   {label: "Global Info",URL: "https://github.com/nianod/See-Global-info", photo: "/public/Screenshot 2025-05-21 152451.png"},
+   {label: "Humour Arena" , URL: "https://github.com/nianod/lottery-game", photo: "/public/Screenshot 2025-05-21 153446.png"}
   
 ]
 const Projects = () => {
@@ -32,16 +32,20 @@ const Projects = () => {
        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
        <p className='text-white text-center'> {displayedText} </p>
     </div>
-    <div>
+    <div className='text-white pb-20 flex content-between items-center gap-5 mt-10 border-2'>
         {handOnProjects.map((item, index) => (
-          <a 
+          <a
           href={item.URL}
           key={index} 
           target='_blank'
           rel='noopener noreferrer'
           >
-          <h2>{item.label}</h2>
-          <button>view Project</button>
+           <img src={item.photo} 
+           alt={"photo of"+ item.label}
+           className='w-70 h-50 object-cover rounded-lg'
+            /> 
+          <h2 className='font-bold text-center'>{item.label}</h2>
+          
           </a>
         ))}
     </div>
