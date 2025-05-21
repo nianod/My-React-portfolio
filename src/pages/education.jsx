@@ -28,7 +28,7 @@ const Education = () => {
    }, [])
   return (
     
-    <div className="pb-20">
+    <div className="pb-25">
       <div className=" py-4 flex flex-col items-center mt-10">
           <h2 className="text-4xl font-bold text-blue-400 mb-2">My Education</h2>
           <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>

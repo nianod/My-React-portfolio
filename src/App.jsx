@@ -3,11 +3,11 @@ import { useEffect } from 'react'
 import AOS from "aos"
 import "aos/dist/aos.css";
 import Home from './pages/home'
-import Skills from './pages/Skills'
-import Education from './pages/Education'
+import Skills from './pages/skills'
+import Education from './pages/education'
 import Blogs from './pages/Blogs'
 import Projects from './pages/projects'
-import Contact from './pages/Contact'
+import Contact from './pages/contact'
 import Layout from './Components/layout'
 
 const App = () => {

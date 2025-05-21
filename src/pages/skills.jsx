@@ -56,9 +56,9 @@ const Skills = () => {
         <h3>{frameworks.Node} </h3> 
       </div>
       <div className='frame'>
-        <img className='iconImg' src={icons.axios} 
-         alt={frameworks.Axios} />
-        <h3>{frameworks.Axios} </h3> 
+        <img className='iconImg' src={icons.next} 
+         alt={frameworks.Next} />
+        <h3>{frameworks.Next} </h3> 
       </div>
       <div className='frame'>
         <div className='flex'>

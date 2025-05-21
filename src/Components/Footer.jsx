@@ -15,9 +15,6 @@ const roots = {
 const Footer = () => {
     return (
         <>
-      <div className="flex justify-center mt-5">
-        <div className="w-1/2 bg-white h-px"></div>
-      </div>
       <div className="flex bg-green-400 mt-3 flex-col items-center fixed w-full bottom-0 z-40 text-center py-2">
         <div className="flex gap-3 text-xl hover:transition-colors text-2xl">
             {FooterContents.map((item, index) => (

@@ -53,7 +53,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex justify-between pb-20 mt-15 p-5">
+      <div className="flex justify-between pb-20 mt-15 p-5 Home">
         <div className="max-w-sm">
           <img
             className="myimage w-[200px] h-[200px] object-cover rounded-full"
@@ -111,6 +111,10 @@ const Home = () => {
           />
         </div>
       </div>
+      
+
+
+
     </>
   );
 };

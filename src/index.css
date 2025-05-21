@@ -27,6 +27,23 @@
 body {
     background: #242424;
 }
+.Navigation:hover {
+    transform: translateY(-3px);
+    color: aquamarine;
+}
+.Navigation::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 0.3s ease;
+    background: linear-gradient(90deg, rgb(51, 241, 102), #cef257);
+}
+.Navigation:hover::after {
+    width: 100%;
+}
 .mains {
  justify-content: space-between;
 }
@@ -56,23 +73,7 @@ body {
 
     }
 }
-.Navigation:hover {
-    transform: translateY(-3px);
-    color: aquamarine;
-}
-.Navigation::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 4px;
-    transition: width 0.3s ease;
-    background: linear-gradient(90deg, rgb(51, 241, 102), #cef257);
-}
-.Navigation:hover::after {
-    width: 100%;
-}
+
 
 .job {
   font-family: Verdana;
@@ -100,7 +101,7 @@ body {
 }
 @keyframes rotate {
     from {
-        transition: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
@@ -154,4 +155,15 @@ body {
         transform: translateY(-10px);
     }
 }
- 
+.bodaree {
+    box-shadow: 0 0 10px rgba(132, 132, 132, 0.7);
+}
+.projos {
+    background: linear-gradient(to right, #455cb6, #191964);
+    font-weight: bold;
+    transition: 1s ease ;
+}
+.projos:hover {
+    background: blue;
+    box-shadow: 0,0,10px rgba(192, 192, 195, 0.9);
+}
