@@ -5,20 +5,20 @@ import React, { useState, useEffect } from 'react'
 let handOnProjects = [
   {
     label: "Online Management", 
-    URL: "https://online-renting-six.vercel.app/", 
-    live: "//importing from public",
+    source: "https://github.com/nianod/Stack-Rent/", 
+    live: "https://online-renting-six.vercel.app",
     photo: "Screenshot 2025-05-21 153717.png"
   },
    {
     label: "Global Info",
-    URL: "https://github.com/nianod/See-Global-info", 
-    live: "//importing from public",
+    source: "https://github.com/nianod/See-Global-info", 
+    live: "public/Weather API/weather Works/index.html",
     photo: "Screenshot 2025-05-21 152451.png"
   },
   {
     label: "Humour Arena", 
-    URL: "https://github.com/nianod/Joke-Overflow", 
-    live: "//importing from public",
+    source: "https://github.com/nianod/Joke-Overflow", 
+    live: "public/Joke Api/index.html",
     photo: " Screenshot 2025-05-21 153446.png"
   }
   
@@ -62,7 +62,7 @@ const Projects = () => {
 
       <div className="flex justify-around">
         <a
-          href={item.URL}
+          href={item.live}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-600 px-3 py-1 rounded text-white hover:bg-blue-700"
@@ -70,7 +70,7 @@ const Projects = () => {
           View demo
         </a>
         <a
-          href={item.URL.includes("github") ? item.URL : "#"}
+          href={item.source}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gray-700 px-3 py-1 rounded text-white hover:bg-gray-800"
