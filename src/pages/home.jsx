@@ -72,7 +72,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="about max-w-sm items-center ml-5">
+        <div className="about max-w-sm items-center ml-5 mb-20">
           <h2 className="text-4xl font-bold text-blue-400 mb-2 flex items-center justify-center">
             About Me
           </h2>
@@ -87,15 +87,15 @@ const Home = () => {
               My approach combines technical skills with business acumen gained
               from my studies.
             </p>
-            <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-15 mb-5">
+            <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 mb-5">
               <b>{awinging.digital}</b>
             </div>
-            <b className="mt-20 block">
+            <b className="mt-150block">
               My journey towards Tech is driven by curiosity and the desire to
               know how to and to create meaningful solutions which are digitized
             </b>
             <div
-              className="swing text-fuchsia-500 border p-4 rounded-xl mt-15 data"
+              className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 data"
               data-aos="flip-up"
             >
               <b>{awinging.future}</b>

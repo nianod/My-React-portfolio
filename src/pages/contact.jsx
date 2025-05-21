@@ -20,8 +20,9 @@ const Contact = () => {
 }
 const send = () => {
   setTimeout(() => {
-    window.location.reload()
-  },2000)
+    alert("Message sent!")
+    form.reset()
+  },800)
 }
     //Moving text
    const [displayedText, setDisplayedText] = useState("")
