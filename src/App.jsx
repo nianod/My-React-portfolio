@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Home from './pages/home'
 import Skills from './pages/skills'
 import Education from './pages/education'
-import Blogs from './pages/Blogs'
+import Blogs from './pages/blogs'
 import Projects from './pages/projects'
 import Contact from './pages/contact'
 import Layout from './Components/layout'
