@@ -24,7 +24,7 @@ let handOnProjects = [
     label: "Humour Arena", 
     source: "https://github.com/nianod/Joke-Overflow", 
     live: "public/Joke Api/index.html",
-    photo: " Screenshot 2025-05-21 153446.png",
+    photo: "Screenshot 2025-05-21 153446.png",
     name: "Programmers Humor Arena"
   }
   

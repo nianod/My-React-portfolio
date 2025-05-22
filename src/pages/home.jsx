@@ -6,7 +6,7 @@ import awinging from "./Ui/dummy";
 const users = {
   name: "Arnold's TECH",
   imageUrl: "/arnold.jpg",
-  imageII: "/public/Screenshot 2025-05-01 181530.png",
+  imageII: "/Screenshot 2025-05-01 181530.png",
 };
 
 const movingText = [

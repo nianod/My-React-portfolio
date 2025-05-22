@@ -4,8 +4,7 @@ import { FaHome, FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope, 
 
 const user = {
   name: "Arnold",
-  prof: "/3c4813fa70d7f0597c00220179dceb9f.png",
-  imagUrl: "/public/Screenshot 2025-05-01 181530.png",
+  imagUrl: "/Screenshot 2025-05-01 181530.png",
   imageSize: 50,
 };
 
