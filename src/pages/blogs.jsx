@@ -3,7 +3,8 @@ import blog from './Ui/blogcard'
 
 const blogPost = {
   image: "/Screenshot 2025-05-22 010859.png",  // Assuming it's in /public
-  title: "WebSockets and REST APIs Explained"
+  title: "WebSockets and REST APIs Explained",
+  link: "https://stackbyarnold-websockets.blogspot.com/2025/05/blog-post.html"
 }
 
 const Blogs = () => {
@@ -43,10 +44,13 @@ const view = () => {
     />
     <h3 className="text-2xl font-bold text-white text-center">{blogPost.title}</h3>
     <button
-      onClick={view}
+      // onClick={view}
       className="text-white bg-blue-800 p-2 rounded-2xl cursor-pointer block mx-auto"
     >
-      Explore Blog
+      <a href={blogPost.link} 
+        target='_blank'
+      > Explore Blog</a>
+     
     </button>
   </div>
 </div>

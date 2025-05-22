@@ -18,12 +18,7 @@ const Contact = () => {
     setEmailPlaceholder("yourname@gmail.com")
     setMessagePlaceholder("Your message...")
 }
-const send = () => {
-  setTimeout(() => {
-    alert("Message sent!")
-    form.reset()
-  },800)
-}
+ 
     //Moving text
    const [displayedText, setDisplayedText] = useState("")
    useEffect(() => {
@@ -79,7 +74,7 @@ const send = () => {
             required
           ></textarea>
           <button
-            onClick={send}
+            
             className='p-2 w-50 text-white rounded-xl bg-blue-500 cursor-pointer m-auto mt-5'
             type='submit'
           >
