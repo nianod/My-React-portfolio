@@ -82,7 +82,7 @@ const Contact = () => {
           </button>
       </form>
     </div>
-  </div>  
+  </div>   
   )
 }
 

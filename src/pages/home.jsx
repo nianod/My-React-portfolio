@@ -18,7 +18,7 @@ const movingText = [
 ];
 
 const Home = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(""); 
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed] = useState(150);

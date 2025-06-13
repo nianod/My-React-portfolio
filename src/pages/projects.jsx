@@ -26,6 +26,13 @@ let handOnProjects = [
     live: "public/Joke Api/index.html",
     photo: "Screenshot 2025-05-21 153446.png",
     name: "Programmers Humor Arena"
+  },
+  {
+    label: "Github profile Finder", 
+    source: "https://github.com/nianod/Github-Profile-Finder", 
+    live: "https://github-profile-finder-smoky.vercel.app/",
+    photo: "Screenshot 2025-06-13 101018.png",
+    name: "Github profile Finder"
   }
   
 ]
