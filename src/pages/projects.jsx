@@ -33,6 +33,13 @@ let handOnProjects = [
     live: "https://github-profile-finder-smoky.vercel.app/",
     photo: "Screenshot 2025-06-13 101018.png",
     name: "Github profile Finder"
+  },
+  {
+    label: "Airbnb looks", 
+    source: "https://github.com/nianod/Airbnb-clone", 
+    live: "https://airbnb-look-alike.vercel.app//",
+    photo: "Screenshot 2025-06-15 132700.png",
+    name: "Airbnb look alike"
   }
   
 ]
