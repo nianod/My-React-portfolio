@@ -40,6 +40,13 @@ let handOnProjects = [
     live: "https://airbnb-look-alike.vercel.app//",
     photo: "Screenshot 2025-06-15 132700.png",
     name: "Airbnb look alike"
+  },
+  {
+    label: "Car shelf", 
+    source: "https://milele-car-shelf-u2qg.vercel.app/", 
+    live: "https://github.com/nianod/Milele-Car-Shelf",
+    photo: "Screenshot 2025-06-18 002149.png",
+    name: "Car shelf"
   }
   
 ]
