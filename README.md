@@ -7,7 +7,7 @@ Welcome to my personal portfolio website! This project showcases who I am, the w
 
 - 🧑‍💻 About Me section  
 - 🛠️ Projects with live previews  
-- 📄 Resume/CV download  
+- 📄 Resume download  
 - 📬 Contact form 
 
 
