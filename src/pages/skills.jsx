@@ -1,9 +1,28 @@
+
+import { useEffect, useState } from 'react'
 import icons from './Ui/skill.icons'
 import { skillTitle, dbs, frameworks, languages } from "./Ui/skilldummy"
 
 
 
-const Skills = () => {
+const Skills = () => { 
+  
+      const [displayedText, setDisplayedText] = useState("")
+
+    useEffect(() => {
+      let currentIndex = 0
+      const typingSpeed = 10;
+
+      const typing = () => {
+        if(currentIndex <= skillTitle.titl.length) {
+          setDisplayedText(skillTitle.titl.substring(0, currentIndex));
+          currentIndex++;
+          setTimeout(typing, typingSpeed)
+        }
+      }
+      typing()
+    }, [])
+  
   
   return (
   <>  
@@ -11,7 +30,7 @@ const Skills = () => {
      <div className='pb-20 mt-15 flex justify-center items-center flex-col'>
       <h1 className='flex justify-center items-center text-4xl font-bold text-blue-400 mb-2 '> Self-Taught-Skills</h1>
        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
-      <p className='EXP text-white mt-5'> {skillTitle.titl} </p>
+      <p className='EXP text-white mt-5'> {displayedText} </p>
     </div>
     <div className='langs flex flex-col items-center justify-center'>
       <h1 className='text-blue-400 underline font-bold text-xl'>Programming Languages</h1>
@@ -56,9 +75,9 @@ const Skills = () => {
         <h3>{frameworks.Node} </h3> 
       </div>
       <div className='frame'>
-        <img className='iconImg' src={icons.next} 
-         alt={frameworks.Next} />
-        <h3>{frameworks.Next} </h3> 
+        <img className='iconImg' src={icons.express} 
+         alt={frameworks.Express} />
+        <h3>{frameworks.Express} </h3> 
       </div>
       <div className='frame'>
         <div className='flex'>

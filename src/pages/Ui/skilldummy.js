@@ -10,7 +10,7 @@ const languages = {
 const frameworks = {
     JSX: "React",
     Node: "Node js",
-    Next: "Next js",
+    Express: "Express js",
     Tail: "Tailwind"
 }
 const dbs = {
