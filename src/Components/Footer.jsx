@@ -15,13 +15,13 @@ const roots = {
 const Footer = () => {
     return (
         <>
-      <div className="flex bg-green-400 mt-3 flex-col items-center fixed w-full bottom-0 z-40 text-center py-2">
+      <div className="footer flex mt-3 flex-col items-center fixed w-full bottom-0 z-40 text-center py-2">
         <div className="flex gap-3 text-xl hover:transition-colors text-2xl">
             {FooterContents.map((item, index) => (
                 <a className="links" key={index} href={item.URL} target="_blank" rel="noopener noreferrer">{item.icon} </a>
             ))}
         </div>
-        <div className="terms">
+        <div className="text-[rgb(64, 60, 82)] font-semibold">
             <h4>&copy; {roots.year} {roots.name} </h4>
             <h5>{roots.rights}</h5>
  

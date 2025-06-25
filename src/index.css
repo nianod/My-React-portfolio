@@ -1,17 +1,13 @@
 @import "tailwindcss";
-/* Hide desktop nav on mobile */
+ 
 @media (max-width: 767px) {
   .md\\:flex {
     display: none !important;
   }
 }
-
-/* Show mobile menu button on mobile */
 .md\\:hidden {
   display: block;
 }
-
-/* Sidebar animation */
 .transition-transform {
   transition-property: transform;
 }
@@ -27,8 +23,7 @@
 .-translate-x-full {
   transform: translateX(-50%);
 }
-
-/* Rest of your existing styles... */
+ 
 @layer utilities {
   .Round {
     animation: rotate 5s linear infinite;
@@ -43,15 +38,15 @@
   }
   .links {
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
     padding: 5px;
-    color: blue;
+    color: rgb(255, 255, 255);
     transition: all 0.3s ease;
   }
   .links:hover {
     cursor: pointer;
     transform: translateY(-3px) scale(1.1);
-    background: gainsboro;
+    background: rgb(0, 0, 0);
   }
 }
 body {
@@ -74,7 +69,9 @@ body {
 .Navigation:hover::after {
   width: 100%;
 }
-
+.footer {
+ background: linear-gradient(to right, rgb(48, 41, 83),rgb(4, 4, 212), rgb(14, 38, 124));
+}
 .mains {
  justify-content: space-between;
 }
