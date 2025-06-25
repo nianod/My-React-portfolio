@@ -44,7 +44,7 @@ let handOnProjects = [
   {
     label: "Car shelf", 
     source: "https://github.com/nianod/Milele-Car-Shelf", 
-    live: "milele-car-shelf.vercel.app",
+    live: "https://milele-car-shelf.vercel.app/",
     photo: "Screenshot 2025-06-18 002149.png",
     name: "Car shelf"
   }

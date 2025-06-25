@@ -32,7 +32,7 @@ const Skills = () => {
        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
       <p className='EXP text-white mt-5'> {displayedText} </p>
     </div>
-    <div className='langs flex flex-col items-center justify-center'>
+    <div data-aos = "flip-down" className='langs flex flex-col items-center justify-center'>
       <h1 className='text-blue-400 underline font-bold text-xl'>Programming Languages</h1>
       <div className='flex gap-5'>
         <div className='single-language'>
@@ -61,7 +61,7 @@ const Skills = () => {
       </div>
     </div>
     </div>
-    <div className='frameworks flex flex-col items-center justify-center'>
+    <div data-aos = "flip-down" className='frameworks flex flex-col items-center justify-center'>
       <h1 className='text-blue-400 underline font-bold text-xl'>Frameworks & Libraries</h1>
       <div className='flex gap-5'>
         <div className='frame'>
@@ -88,7 +88,7 @@ const Skills = () => {
       </div>
     </div>
     </div>
-    <div className='dabs flex flex-col items-center justify-center mb-20'>
+    <div data-aos = "flip-down" className='dabs flex flex-col items-center justify-center mb-20'>
       <h1 className='text-blue-400 underline font-bold text-xl'>Database Technologies</h1>
       <div className='flex gap-5'>
         <div className='database'>
