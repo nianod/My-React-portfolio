@@ -11,8 +11,8 @@ const users = {
 
 const movingText = [
   "Hello my name is Arnold...",
-  "A Full-stack Developer...",
-  "Coding & programming Hobbyist...",
+  "A Full-Stack Developer...",
+  "Coding Hobbyist...",
   "I like sharing my knowledge...",
   "Can we collaborate?",
 ];
