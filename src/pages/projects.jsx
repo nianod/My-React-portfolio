@@ -7,25 +7,25 @@ const moreProjects = {
 }
 let handOnProjects = [
   {
-    label: "Online Management", 
+    label: "Online Rental Management", 
     source: "https://github.com/nianod/Stack-Rent/", 
     live: "https://online-renting-six.vercel.app",
     photo: "Screenshot 2025-05-21 153717.png",
     name: "Online Rental Management"
   },
    {
-    label: "Global Info",
-    source: "https://github.com/nianod/See-Global-info", 
-    live: "public/Weather API/weather Works/index.html",
-    photo: "Screenshot 2025-05-21 152451.png",
-    name: "REST Cntrs"
+    label: "Chatbot",
+    source: "https://github.com/nianod/Express-Ai-Chatbot", 
+    live: "https://express-ai-chatbot.vercel.app/",
+    photo: "chatbot.jpeg",
+    name: "AI Chatbot"
   },
   {
-    label: "Humour Arena", 
-    source: "https://github.com/nianod/Joke-Overflow", 
-    live: "public/Joke Api/index.html",
-    photo: "Screenshot 2025-05-21 153446.png",
-    name: "Programmers Humor Arena"
+    label: "Youtube Video Downloader", 
+    source: "https://github.com/nianod/Youtube-downloader", 
+    live: "https://youtube-video-downloader-two-delta.vercel.app/",
+    photo: "images.jpeg",
+    name: "Youtube Video Downloader"
   },
   {
     label: "Github profile Finder", 
