@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import awinging from "./Ui/dummy";
-
-
+import Resime from "../Components/resime";
 
 const users = {
   name: "Arnold's TECH",
@@ -11,7 +10,7 @@ const users = {
 
 const movingText = [
   "Hello my name is Arnold...",
-  "A Full-Stack Developer...",
+  "A Software Developer...",
   "Coding Hobbyist...",
   "I like sharing my knowledge...",
   "Can we collaborate?",
@@ -87,6 +86,7 @@ const Home = () => {
               My approach combines technical skills with business acumen gained
               from my studies.
             </p>
+            <Resime/>
             <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 mb-5">
               <b>{awinging.digital}</b>
             </div>

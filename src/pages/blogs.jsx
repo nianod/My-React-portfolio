@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import blog from './Ui/blogcard'
 
 const blogPost = {
-  image: "/Screenshot 2025-05-22 010859.png",  // Assuming it's in /public
+  image: "/Screenshot 2025-05-22 010859.png",  
   title: "WebSockets and REST APIs Explained",
   link: "https://stackbyarnold-websockets.blogspot.com/2025/05/blog-post.html"
 }
@@ -44,7 +44,7 @@ const view = () => {
     />
     <h3 className="text-2xl font-bold text-white text-center">{blogPost.title}</h3>
     <button
-      // onClick={view}
+      
       className="text-white bg-blue-800 p-2 rounded-2xl cursor-pointer block mx-auto"
     >
       <a href={blogPost.link} 
@@ -54,7 +54,6 @@ const view = () => {
     </button>
   </div>
 </div>
-
   )
 }
 
