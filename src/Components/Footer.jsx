@@ -6,17 +6,19 @@ const FooterContents = [
     { icon: <FaTwitter/>, URL: "https://x.com/Itsarnold001" },
     { icon: <FaInstagram/>, URL: "https://www.instagram.com/ar_nold._" }
 ]
+
 const roots = {
     name: "Arnold",
     year: 2025,
     rights: "All rights reserved"
 }
 
+
 const Footer = () => {
     return (
         <>
       <div className="footer flex mt-3 flex-col items-center fixed w-full bottom-0 z-40 text-center py-2">
-        <div className="flex gap-3 text-xl hover:transition-colors text-2xl">
+        <div className="flex gap-3 hover:transition-colors text-2xl">
             {FooterContents.map((item, index) => (
                 <a className="links" key={index} href={item.URL} target="_blank" rel="noopener noreferrer">{item.icon} </a>
             ))}

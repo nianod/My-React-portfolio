@@ -72,10 +72,10 @@ const Home = () => {
         </div>
 
         <div className="about max-w-sm items-center ml-5 mb-20">
-          <h2 className="text-4xl font-bold text-blue-400 mb-2 flex items-center justify-center">
+          <h2 className="sm:items-center text-4xl font-bold text-blue-400 mb-2 flex items-center justify-center">
             About Me
           </h2>
-          <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
+          <div className="sm:items-center sm:flex sm:justify-center w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
           <div className="text-white mt-3">
             <p>
               I'm a self-taught developer from Kenya. I'm currently in my first

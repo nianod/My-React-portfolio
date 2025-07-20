@@ -182,6 +182,7 @@ body {
 @media (max-width: 768px) {
   .Home {
     flex-direction: column;
+    margin-top: 20px;
     align-items: center;
     gap: 30px;
     padding: 15px;
