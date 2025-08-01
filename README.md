@@ -10,6 +10,10 @@ Welcome to my personal portfolio website! This project showcases who I am, the w
 - 📄 Resume download  
 - 📬 Contact form 
 
+## TECH STACK
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" />
+
 
 ## 🔧 Installation & Setup
 
