@@ -47,6 +47,13 @@ let handOnProjects = [
     live: "https://milele-car-shelf.vercel.app/",
     photo: "Screenshot 2025-06-18 002149.png",
     name: "Car shelf"
+  },
+  {
+    label: "Chat app", 
+    source: "https://github.com/nianod/Supabase-Chat-APP", 
+    live: "https://github.com/nianod/Supabase-Chat-APP",
+    photo: "Screenshot 2025-08-01 231103.png",
+    name: "Chat App"
   }
   
 ]

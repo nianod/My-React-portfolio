@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import awinging from "./Ui/dummy";
 import Resime from "../Components/resime";
 
