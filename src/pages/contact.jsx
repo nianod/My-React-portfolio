@@ -6,17 +6,20 @@ const Contact = () => {
   const [sent, setSent] = useState(false);
   const [namePlaceholder, setNamePlaceholder] = useState("Full Name");
   const [phoneNoPlaceholder, setPhoneNoPlaceholder] = useState("+25412345678");
-  const [messagePlaceholder, setMessagePlaceholder] =
-    useState("Your message...");
+  const [messagePlaceholder, setMessagePlaceholder] = useState("Your message...");
+  const [timestamp, setTimestamp] = useState(null)
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const now = new Date()
+    setTimestamp(now)
     setSent(true);
 
-     
     setNamePlaceholder("Full Name");
     setPhoneNoPlaceholder("+25412345678");
     setMessagePlaceholder("Your message...");
+
+
   };
  
   const [displayedText, setDisplayedText] = useState("");
@@ -48,7 +51,6 @@ const Contact = () => {
 
         <div className="pb-30">
           <form
-            onSubmit={handleSubmit}
             className="bg-black gap-2 mt-5 max-w-[30rem] mx-auto p-6 flex flex-col text-white rounded-xl bodaree"
           >
             <div data-aos="zoom-in" className="text-center mt-5 text-white">
@@ -59,8 +61,12 @@ const Contact = () => {
                 Your message has been sent successfully. We'll get back to you
                 soonest Possible.
               </p>
-              <p>Deliverly Time 
-                <span></span>
+              <p className='bg-blue-600 rounded p-2 font-semibold mt-4'>
+                {timestamp && (
+                  <span>
+                     Deliverly time: {new Date(timestamp).toLocaleString()}
+                  </span>
+                )}
               </p>
             </div>
           </form>
