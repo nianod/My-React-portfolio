@@ -12,9 +12,13 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSent(true);
+
+     
+    setNamePlaceholder("Full Name");
+    setPhoneNoPlaceholder("+25412345678");
+    setMessagePlaceholder("Your message...");
   };
-
-
+ 
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
     let currentIndex = 0;
@@ -30,6 +34,7 @@ const Contact = () => {
     type();
   }, []);
 
+   
   if (sent) {
     return (
       <div data-aos="zoom-in">
