@@ -23,7 +23,7 @@ const Footer = () => {
                 <a className="links" key={index} href={item.URL} target="_blank" rel="noopener noreferrer">{item.icon} </a>
             ))}
         </div>
-        <div className="text-[rgb(64, 60, 82)] font-semibold">
+        <div className="text-[rgba(130, 128, 136, 1)] font-semibold">
             <h4>&copy; {roots.year} {roots.name} </h4>
             <h5>{roots.rights}</h5>
  

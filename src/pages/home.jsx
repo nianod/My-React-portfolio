@@ -17,7 +17,7 @@ const movingText = [
 ];
 
 const Home = () => {
-  const [text, setText] = useState(""); 
+  const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed] = useState(150);
@@ -72,10 +72,10 @@ const Home = () => {
         </div>
 
         <div className="about max-w-sm items-center ml-5 mb-20">
-          <h2 className="sm:items-center text-4xl font-bold text-blue-400 mb-2 flex items-center justify-center">
+          <h2 className="sm:items-center text-4xl font-bold text-blue-400 mb-2 text-center">
             About Me
           </h2>
-          <div className="sm:items-center sm:flex sm:justify-center w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
+          <div className="sm:items-center sm:flex sm:justify-center w-full h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
           <div className="text-white mt-3">
             <p>
               I'm a self-taught developer from Kenya. I'm currently in my second
@@ -86,7 +86,7 @@ const Home = () => {
               My approach combines technical skills with business acumen gained
               from my studies.
             </p>
-            <Resime/>
+            <Resime />
             <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 mb-5">
               <b>{awinging.digital}</b>
             </div>
@@ -111,7 +111,7 @@ const Home = () => {
           />
         </div>
       </div>
-      
+
 
 
 
