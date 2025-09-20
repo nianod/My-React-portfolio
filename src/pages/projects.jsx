@@ -54,8 +54,16 @@ let handOnProjects = [
     live: "https://github.com/nianod/Supabase-Chat-APP",
     photo: "Screenshot 2025-08-01 231103.png",
     name: "Chat App"
+  },
+  {
+    label: "E-commerce site", 
+    source: "https://github.com/nianod/MERN-E-COMMERCE", 
+    live: "https://github.com/nianod/MERN-E-COMMERCE",
+    photo: "download.jpeg",
+    name: "E-commerce site"
   }
-  
+
+
 ]
 const Projects = () => {
       const [displayedText, setDisplayedText] = useState("");
