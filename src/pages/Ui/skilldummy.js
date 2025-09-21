@@ -11,7 +11,7 @@ const frameworks = {
     JSX: "React",
     Node: "Node js",
     Express: "Express js",
-    Tail: "Tailwind"
+    Next: "Next JS"
 }
 const dbs = {
     Mongo: "MongoDb",

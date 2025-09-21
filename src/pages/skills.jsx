@@ -26,7 +26,7 @@ const Skills = () => {
   
   return (
   <>  
-  <div data-aos="fade-left" className='pb-20'>
+  <div data-aos="fade-left">
      <div className='pb-20 mt-15 flex justify-center items-center flex-col'>
       <h1 className='flex justify-center items-center text-4xl font-bold text-blue-400 mb-2 '> Self-Taught-Skills</h1>
        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
@@ -81,10 +81,10 @@ const Skills = () => {
       </div>
       <div className='frame'>
         <div className='flex'>
-        <img className='iconImg' src={icons.tailwind}
-         alt={frameworks.Tail} />
+        <img className='iconImg' src={icons.next}
+         alt={frameworks.Next} />
          </div>
-        <h3>{frameworks.Tail} </h3> 
+        <h3>{frameworks.Next} </h3> 
       </div>
     </div>
     </div>
@@ -104,6 +104,11 @@ const Skills = () => {
     </div>
     </div>
   </div>
+
+    <div className='pb-30'>
+      <p>Competitive Skills</p>
+      
+    </div>
 
   </>  
   )

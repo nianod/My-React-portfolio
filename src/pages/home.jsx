@@ -77,7 +77,7 @@ const Home = () => {
           <div className="sm:items-center sm:flex sm:justify-center w-full h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
           <div className="text-white mt-3">
             <p>
-              I'm a self-taught developer from Kenya. I'm currently in my second
+              I'm a self-taught experienced and Passionate Full-Stack Developer from Kenya. I'm currently in my second
               year studying Information Technology at Meru University.
               I specialize in building responsive, accessible, scalable and
               performant digital experiences that make a great impact.
@@ -110,10 +110,6 @@ const Home = () => {
           />
         </div>
       </div>
-
-
-
-
     </>
   );
 };

@@ -84,9 +84,7 @@ body {
   margin-top: 60px;
   padding: 20px;
   gap: 20px;
-}
-
- 
+} 
 .Home > div:first-child {
   max-width: 320px;
 }
@@ -160,8 +158,6 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
- 
 .job {
   font-family: Verdana;
   font-weight: 900;
