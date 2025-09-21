@@ -85,10 +85,15 @@ const Header = () => {
           ))}
         </div>
         {isOpen && (
-          <div className="mt-55 flex justify-center">
+          <div className="mt-53 flex justify-center">
             <a 
-             className="text-white"
-             href="https://we-re-arnold-official.vercel.app/"><FaSuperpowers />Support us</a>
+              className="text-white flex items-center gap-1"
+              href="https://we-re-arnold-official.vercel.app/"
+              target="__blank"
+              rel='noreferrer'
+            >
+              <FaSuperpowers /> Support us
+            </a>
           </div>
         )}
       </div>
