@@ -184,19 +184,14 @@ body {
     flex-direction: column;
     margin-top: 20px;
     align-items: center;
-    gap: 30px;
-    padding: 15px;
-    margin-top: 30px;
+    gap: 20px;
+    margin-top: 40px;
   }
-  .Home > div:last-child {
-    min-height: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
+   
   .myimage, .animating {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 5px;
+    width: 200px;
+    height: 200px;
+    
   }
   .about {
     margin-left: 0;
@@ -209,9 +204,12 @@ body {
     font-size: 18px;
   }
 }
-
+  
+.animating {
+  margin-top: -300px;
+}
 @media (max-width: 480px) {
-  .myimage, .animating {
+  .myimage {
     width: 120px;
     height: 120px;
   }

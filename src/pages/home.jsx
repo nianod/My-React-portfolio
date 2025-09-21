@@ -11,8 +11,7 @@ const users = {
 const movingText = [
   "Hello my name is Arnold...",
   "A Software Developer...",
-  "Coding Hobbyist...",
-  "I like sharing my knowledge...",
+  "Cybersecurity Enthusiast",
   "Can we collaborate?",
 ];
 
@@ -55,7 +54,7 @@ const Home = () => {
       <div className="flex justify-between pb-20 mt-15 p-5 Home">
         <div className="max-w-sm">
           <img
-            className="myimage w-[200px] h-[200px] object-cover rounded-full"
+            className="myimage w-[200px] h-[200px] object-cover rounded-full "
             src={users.imageUrl}
             alt={"Photo of " + users.name}
           />
@@ -103,9 +102,9 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center ">
           <img
-            className="animating w-[200px] h-[200px] object-cover rounded-full mr-5"
+            className="animating mr-5"
             src={users.imageII}
             alt={"photo of " + users.name}
           />

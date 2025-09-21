@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaCode, FaGraduationCap, FaBlog, FaProjectDiagram, FaEnvelope, FaBars } from "react-icons/fa";
+import {
+  FaHome,
+  FaCode,
+  FaGraduationCap,
+  FaBlog,
+  FaProjectDiagram,
+  FaEnvelope,
+  FaBars,
+} from "react-icons/fa";
 
 const user = {
   name: "Arnold",
   imagUrl: "/Screenshot 2025-05-01 181530.png",
   imageSize: 50,
 };
-
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,16 +51,26 @@ const Header = () => {
         </button>
         {isOpen && (
           <div
-            className="fixed inset-0 bg-black/30 backdrop-blur-md z-30"
+            className="fixed inset-0 backdrop-blur-md z-30"
             onClick={() => setIsOpen(false)}
           ></div>
         )}
-
       </div>
       <div
-        className={`fixed top-0 right-0 w-1/2 h-full bg-fuchsia-600 transform transition-transform duration-300 ease-in-out z-40 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`rounded shadow-md fixed top-0 right-0 w-1/2 h-[70%] bg-fuchsia-600 transform transition-all duration-500 ease-in-out z-40 
+    ${
+      isOpen
+        ? "translate-x-0 opacity-100 scale-100"
+        : "translate-x-full opacity-0 scale-95"
+    }`}
       >
-        <div className="flex flex-col p-4 gap-6">
+        <button
+          className="right-2 absolute font-bold cursor-pointer hover:rotate-45 transition-transform duration-300"
+          onClick={() => setIsOpen(false)}
+        >
+          ✕
+        </button>
+        <div className="flex flex-col p-4 gap-6 mt-4">
           {navContents.map((item) => (
             <Link
               key={item.path}
@@ -73,14 +90,12 @@ const Header = () => {
 
 export default Header;
 
-
-
 const navContents = [
   { label: "Home", icon: <FaHome />, path: "/" },
   { label: "Skills", icon: <FaCode />, path: "/skills" },
   { label: "Education", icon: <FaGraduationCap />, path: "/education" },
   { label: "Blogs", icon: <FaBlog />, path: "/blogs" },
   { label: "Projects", icon: <FaProjectDiagram />, path: "/projects" },
-  { label: "Contact", icon: <FaEnvelope />, path: "/contact" }
+  { label: "Contact", icon: <FaEnvelope />, path: "/contact" },
   // { label: "mode", icon: <FaMoon/>}
 ];
