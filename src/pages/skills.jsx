@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import icons from './Ui/skill.icons'
 import { skillTitle, dbs, frameworks, languages } from "./Ui/skilldummy"
+import moreSkills from './Ui/MoreSkills'
 
 
 
@@ -105,10 +106,29 @@ const Skills = () => {
     </div>
   </div>
 
-    <div className='pb-30'>
-      <p>Competitive Skills</p>
-      
-    </div>
+<div className="pb-30 mt-10 p-5">
+  <p className="font-bold text-lg mb-4 text-white text-center underline">Competitive Skills & Tools</p>
+
+  <div className="flex flex-wrap gap-3">
+    {moreSkills.map((skill) => (
+      <div
+        key={skill.name}
+        className="group flex items-center gap-2 border border-gray-400 rounded-lg px-3 py-2 shadow-sm transition hover:bg-white"
+      >
+        <img
+          src={skill.icon}
+          alt={skill.name}
+          className="w-6 h-6"
+        />
+        <p className="text-sm font-medium text-white transition-colors duration-700 group-hover:text-black!">
+          {skill.name}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+
+
 
   </>  
   )
