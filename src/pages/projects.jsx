@@ -2,15 +2,16 @@ import projectsc from "./Ui/projects";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import handOnProjects from "./Ui/HandOnProjects";
-
+import Description from "./Description";
 
 const moreProjects = {
   url: "https://github.com/nianod?tab=repositories",
 };
 
 const Projects = () => {
-  const [displayedText, setDisplayedText] = useState("")
-  const [description, setDescription] = useState(false)
+  const [displayedText, setDisplayedText] = useState("");
+  const [description, setDescription] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     let currentIndex = 0;
@@ -26,11 +27,16 @@ const Projects = () => {
 
     type();
   }, []);
+
+  const handleDescriptionClick = (project) => {
+    setSelectedProject(project);
+    setDescription(true);
+  };
+
   return (
     <>
       <div className="mt-15 flex flex-col items-center">
-        <h1 className="flex justify-center items-center text-4xl font-bold text-blue-400 mb-2 ">
-          {" "}
+        <h1 className="flex justify-center items-center text-4xl font-bold text-blue-400 mb-2">
           My Projects
         </h1>
         <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
@@ -64,8 +70,14 @@ const Projects = () => {
                 }`}
                 onClick={(e) => item.mode === "private" && e.preventDefault()}
               >
-                 View Demo
+                View Demo
               </a>
+              <button 
+                className="px-3 py-1 rounded bg-yellow-600 text-white hover:bg-yellow-700"
+                onClick={() => handleDescriptionClick(item)}
+              >
+                Description
+              </button>
               <a
                 href={item.mode === "private" ? undefined : item.source}
                 target="_blank"
@@ -83,6 +95,15 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      
+      {description && (
+        <Description 
+          description={description} 
+          setDescription={setDescription}
+          project={selectedProject}
+        />
+      )}
+      
       <div className="pb-25 flex justify-center" data-aos="flip-right">
         <Link to={moreProjects.url} target="_blank">
           <button className="px-5 py-2 text-white rounded projos cursor-pointer">
