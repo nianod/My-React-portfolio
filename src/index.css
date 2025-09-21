@@ -49,6 +49,7 @@
     background: rgb(0, 0, 0);
   }
 }
+
 body {
   background: #242424;
 }
@@ -129,8 +130,8 @@ body {
 }
 .swing {
   box-shadow: 0 0 10px rgba(116, 116, 116, 0.6);
-  background: white;
-  animation: updown 2s infinite ease-in-out;
+  background: rgb(15, 4, 83);
+  animation: updown 6s infinite ease-in-out;
 }
 @keyframes updown {
   0%, 100% { transform: translateY(0); }

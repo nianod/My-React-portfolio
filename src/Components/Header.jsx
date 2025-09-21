@@ -57,7 +57,7 @@ const Header = () => {
         )}
       </div>
       <div
-        className={`rounded shadow-md fixed top-0 right-0 w-1/2 h-[70%] bg-fuchsia-600 transform transition-all duration-500 ease-in-out z-40 
+        className={`rounded shadow-md fixed top-0 right-0 w-1/2 h-[100%] bg-[#0f0453] transform transition-all duration-500 ease-in-out z-40 
     ${
       isOpen
         ? "translate-x-0 opacity-100 scale-100"
@@ -65,7 +65,7 @@ const Header = () => {
     }`}
       >
         <button
-          className="right-2 absolute font-bold cursor-pointer hover:rotate-45 transition-transform duration-300"
+          className="right-3 text-2xl absolute text-fuchsia-500 font-bold cursor-pointer hover:rotate-45 transition-transform duration-300"
           onClick={() => setIsOpen(false)}
         >
           ✕
@@ -76,9 +76,9 @@ const Header = () => {
               key={item.path}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              className="Navigation flex items-center font-bold gap-2 text-white text-lg"
+              className="Navigation flex items-center font-bold gap-2 text-fuchsia-500 text-lg"
             >
-              <span className="Round text-black">{item.icon}</span>
+              <span className="Round text-white">{item.icon}</span>
               <span>{item.label}</span>
             </Link>
           ))}
