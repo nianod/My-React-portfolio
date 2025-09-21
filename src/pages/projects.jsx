@@ -1,86 +1,16 @@
 import projectsc from "./Ui/projects";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import handOnProjects from "./Ui/HandOnProjects";
+
 
 const moreProjects = {
   url: "https://github.com/nianod?tab=repositories",
 };
-let handOnProjects = [
-  {
-    label: "Online Rental Management",
-    source: "https://github.com/nianod/Stack-Rent/",
-    live: "https://online-renting-six.vercel.app",
-    photo: "Screenshot 2025-05-21 153717.png",
-    name: "Online Rental Management",
-    mode: "public",
-  },
-  {
-    label: "Chatbot",
-    source: "https://github.com/nianod/Express-Ai-Chatbot",
-    live: "https://express-ai-chatbot.vercel.app/",
-    photo: "chatbot.jpeg",
-    name: "AI Chatbot",
-    mode: "public",
-  },
-  {
-    label: "Youtube Video Downloader",
-    source: "https://github.com/nianod/Youtube-downloader",
-    live: "https://youtube-video-downloader-two-delta.vercel.app/",
-    photo: "images.jpeg",
-    name: "Youtube Video Downloader",
-    mode: "public",
-  },
-  {
-    label: "Github profile Finder",
-    source: "https://github.com/nianod/Github-Profile-Finder",
-    live: "https://github-profile-finder-smoky.vercel.app/",
-    photo: "Screenshot 2025-06-13 101018.png",
-    name: "Github profile Finder",
-    mode: "public",
-  },
-  {
-    label: "Airbnb looks",
-    source: "https://github.com/nianod/Airbnb-clone",
-    live: "https://airbnb-look-alike.vercel.app//",
-    photo: "Screenshot 2025-06-15 132700.png",
-    name: "Airbnb look alike",
-    mode: "public",
-  },
-  {
-    label: "Car shelf",
-    source: "https://github.com/nianod/Milele-Car-Shelf",
-    live: "https://milele-car-shelf.vercel.app/",
-    photo: "Screenshot 2025-06-18 002149.png",
-    name: "Car shelf",
-    mode: "public",
-  },
-  {
-    label: "Chat app",
-    source: "https://github.com/nianod/Supabase-Chat-APP",
-    live: "https://github.com/nianod/Supabase-Chat-APP",
-    photo: "Screenshot 2025-08-01 231103.png",
-    name: "Chat App",
-    mode: "public",
-  },
-  {
-    label: "E-commerce site",
-    source: "https://github.com/nianod/MERN-E-COMMERCE",
-    live: "https://github.com/nianod/MERN-E-COMMERCE",
-    photo: "download.jpeg",
-    name: "E-commerce site",
-    mode: "public",
-  },
-  {
-    label: "Neighbourhood",
-    source: "https://github.com/nianod/Help-board-hub",
-    live: "https://github.com/nianod/Help-board-hub",
-    photo: "help-1013700_1280.webp",
-    name: "Neighbourhood Help Hub",
-    mode: "private",
-  },
-];
+
 const Projects = () => {
-  const [displayedText, setDisplayedText] = useState("");
+  const [displayedText, setDisplayedText] = useState("")
+  const [description, setDescription] = useState(false)
 
   useEffect(() => {
     let currentIndex = 0;
@@ -153,7 +83,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-
       <div className="pb-25 flex justify-center" data-aos="flip-right">
         <Link to={moreProjects.url} target="_blank">
           <button className="px-5 py-2 text-white rounded projos cursor-pointer">
