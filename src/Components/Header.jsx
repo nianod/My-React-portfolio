@@ -8,6 +8,7 @@ import {
   FaProjectDiagram,
   FaEnvelope,
   FaBars,
+  FaSuperpowers
 } from "react-icons/fa";
 
 const user = {
@@ -65,7 +66,7 @@ const Header = () => {
     }`}
       >
         <button
-          className="right-3 text-2xl absolute text-fuchsia-500 font-bold cursor-pointer hover:rotate-45 transition-transform duration-300"
+          className="right-4 text-2xl absolute text-fuchsia-500 font-bold cursor-pointer hover:rotate-45 transition-transform duration-300"
           onClick={() => setIsOpen(false)}
         >
           ✕
@@ -83,6 +84,13 @@ const Header = () => {
             </Link>
           ))}
         </div>
+        {isOpen && (
+          <div className="mt-55 flex justify-center">
+            <a 
+             className="text-white"
+             href="https://we-re-arnold-official.vercel.app/"><FaSuperpowers />Support us</a>
+          </div>
+        )}
       </div>
     </header>
   );
