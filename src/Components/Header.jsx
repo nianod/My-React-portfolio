@@ -78,7 +78,7 @@ const Header = () => {
               key={item.path}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              className="p-4 flex items-center font-bold gap-2 text-fuchsia-500 text-lg rounded hover:bg-blue-900"
+              className="border-b-[1.5px] p-4 flex items-center font-bold gap-2 text-fuchsia-500 text-lg rounded-md hover:bg-blue-900"
             >
               <span className="Round text-white">{item.icon}</span>
               <span>{item.label}</span>
@@ -87,7 +87,7 @@ const Header = () => {
         </div>
 
         {isOpen && (
-          <div className="p-4 flex justify-center">
+          <div className="p-4 flex justify-center ">
             <a
               className="text-white flex items-center gap-1"
               href="https://we-re-arnold-official.vercel.app/"
