@@ -70,6 +70,7 @@ let handOnProjects = [
     photo: "help-1013700_1280.webp",
     name: "Neighbourhood Help Hub",
     mode: "private",
+    description: "A simple web based application that connects people who are looking for help with one's who are potential in offering it"
   },
 ];
 export default handOnProjects

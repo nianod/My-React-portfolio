@@ -73,7 +73,7 @@ const Projects = () => {
                 View Demo
               </a>
               <button 
-                className="px-3 py-1 rounded bg-yellow-600 text-white hover:bg-yellow-700"
+                className="px-3 py-1 rounded bg-yellow-600 text-white hover:bg-yellow-700 cursor-pointer"
                 onClick={() => handleDescriptionClick(item)}
               >
                 Description

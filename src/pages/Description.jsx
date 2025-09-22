@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 
-const Description = ({ description, setDescription }) => {
+const Description = ({ description, setDescription, project }) => {
   if (!description) return null;
 
- 
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -17,7 +16,7 @@ const Description = ({ description, setDescription }) => {
         className="fixed inset-0 backdrop-blur-md z-40"
         onClick={() => setDescription(false)}
       ></div>
-      
+
       <div className="fixed inset-0 flex items-center justify-center z-50">
         <div className="bg-white rounded-lg shadow-xl w-11/12 max-w-2xl h-80 overflow-hidden flex flex-col">
           <div className="flex justify-between items-center p-4 border-b">
@@ -29,7 +28,16 @@ const Description = ({ description, setDescription }) => {
               ✕
             </button>
           </div>
+
           <div className="p-4 overflow-y-auto flex-grow">
+            {project ? (
+              <>
+                <h3 className="text-lg font-bold">{project.name}</h3>
+                <p className="mt-2">{project.description || "No description available."}</p>
+              </>
+            ) : (
+              <p>No project selected.</p>
+            )}
           </div>
         </div>
       </div>
@@ -37,4 +45,4 @@ const Description = ({ description, setDescription }) => {
   );
 };
 
- export default Description
+export default Description;
