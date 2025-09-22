@@ -24,8 +24,8 @@ const Footer = () => {
             ))}
         </div>
         <div className="text-[rgba(130, 128, 136, 1)] font-semibold">
-            <h4>&copy; {roots.year} {roots.name} </h4>
-            <h5>{roots.rights}</h5>
+            <h4 className="text-white">&copy; {roots.year} {roots.name} - {roots.rights}</h4>
+
  
         </div>
       </div>    

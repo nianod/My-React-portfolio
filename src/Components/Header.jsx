@@ -8,7 +8,7 @@ import {
   FaProjectDiagram,
   FaEnvelope,
   FaBars,
-  FaSuperpowers
+  FaSuperpowers,
 } from "react-icons/fa";
 
 const user = {
@@ -59,11 +59,11 @@ const Header = () => {
       </div>
       <div
         className={`rounded shadow-md fixed top-0 right-0 w-1/2 h-[100%] bg-[#0f0453] transform transition-all duration-500 ease-in-out z-40 
-    ${
+     ${
       isOpen
         ? "translate-x-0 opacity-100 scale-100"
         : "translate-x-full opacity-0 scale-95"
-    }`}
+    } flex flex-col justify-between`}
       >
         <button
           className="right-4 text-2xl absolute text-fuchsia-500 font-bold cursor-pointer hover:rotate-45 transition-transform duration-300"
@@ -71,26 +71,28 @@ const Header = () => {
         >
           ✕
         </button>
-        <div className="flex flex-col p-4 gap-6 mt-4">
+
+        <div className="flex flex-col p-2 mt-7">
           {navContents.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               onClick={() => setIsOpen(false)}
-              className="Navigation flex items-center font-bold gap-2 text-fuchsia-500 text-lg"
+              className="p-4 flex items-center font-bold gap-2 text-fuchsia-500 text-lg rounded hover:bg-blue-900"
             >
               <span className="Round text-white">{item.icon}</span>
               <span>{item.label}</span>
             </Link>
           ))}
         </div>
+
         {isOpen && (
-          <div className="mt-53 flex justify-center">
-            <a 
+          <div className="p-4 flex justify-center">
+            <a
               className="text-white flex items-center gap-1"
               href="https://we-re-arnold-official.vercel.app/"
               target="__blank"
-              rel='noreferrer'
+              rel="noreferrer"
             >
               <FaSuperpowers /> Support us
             </a>
