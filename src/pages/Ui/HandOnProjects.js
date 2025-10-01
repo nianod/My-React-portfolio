@@ -8,7 +8,7 @@ let handOnProjects = [
     mode: "public",
     description: "a modern, responsive, and tech-inspired site that showcases our services, projects, pricing, and more as a team. Built with cutting-edge tools and a clean design, this site delivers both style and functionality.",
     stack: {
-      fronted: "React, Vite, Framer Motion",
+      fronted: "React(JSX), Context API, Framer Motion",
       backend: "ExpressJs for message deliverly"
     }
   },
@@ -34,7 +34,7 @@ let handOnProjects = [
     mode: "public",
     description: "This is a full-stack chatbot application powered by React (Vite) on the frontend and Express.js on the backend. Users can send messages, and the backend responds just like you're chatting with a bot!",
        stack: {
-      fronted: "React, Typescript, Vite, Framer Motion",
+      fronted: "React(JSX), Typescript, Vite, Framer Motion",
       backend: "NodeJs, ExpressJs, OpenAI API"
     }
   },
@@ -48,7 +48,7 @@ let handOnProjects = [
     description: "A custom Node.js-based YouTube downloader built with Express and ytdl-core. Provides an API to fetch and download video/audio streams from YouTube URLs",
           stack: {
       fronted: "Html, Css, Javascript",
-      backend: "-"
+      backend: "Node.js with Express.js"
     }
   },
   {
@@ -58,6 +58,10 @@ let handOnProjects = [
     photo: "Screenshot 2025-06-13 101018.png",
     name: "Github profile Finder",
     mode: "public",
+    stack: {
+      fronted: "React(JSX), Taliwind",
+      backend: "Node.js with Express.js"
+    }    
   },
   {
     label: "Airbnb looks",
@@ -66,6 +70,10 @@ let handOnProjects = [
     photo: "Screenshot 2025-06-15 132700.png",
     name: "Airbnb look alike",
     mode: "public",
+    stack: {
+      fronted: "Html & Css",
+      backend: "-"
+    }
   },
   {
     label: "Car shelf",
@@ -76,7 +84,7 @@ let handOnProjects = [
     mode: "public",
     description: "A simple web application to sell, buy and hire cars from Milele car sellers",
     stack: {
-      fronted: "Html, Css, Javascript",
+      fronted: "React(TSX), SweelAlert, Tailwind",
       backend: "-"
     }
   },
@@ -89,8 +97,8 @@ let handOnProjects = [
     mode: "public",
     description: "This is a realtime chat app which allow users to sign in with Google, send messages, and see them instantly update across all connected users.",
     stack: {
-      fronted: "Html, Css, Javascript",
-      backend: "-"
+      fronted: "React(JSX) & Tailwind",
+      backend: "Supabase sockets & Google Auth"
     }
   },
   {
@@ -102,8 +110,8 @@ let handOnProjects = [
     mode: "public",
     description: "A full-stack E-Commerce web applicatin which Includes JWT authentication, user roles, admin dashboard, product management, and order tracking.",
     stack: {
-      fronted: "Html, Css, Javascript",
-      backend: "-"
+      fronted: "React(TSX), Tailwind, Axios",
+      backend: "NodeJS, ExpressJS, MOngoDB, JWT, JOI"
     }
   },
   {
@@ -115,8 +123,8 @@ let handOnProjects = [
     mode: "private",
     description: "A simple web based application that connects people who are looking for help with one's who are potential in offering it",
     stack: {
-      fronted: "Html, Css, Javascript",
-      backend: "-"
+      fronted: "React(JSX), Tailwind, Typescript, AOS, MarkDown, Context API",
+      backend: "Supabase Auth & Supabase Database, Python"
     }
   },
 ];

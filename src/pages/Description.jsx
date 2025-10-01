@@ -34,13 +34,13 @@ const Description = ({ description, setDescription, project }) => {
               <>
                 <h3 className="text-lg font-bold">{project.name}</h3>
                 <p className="mt-2">{project.description || "No description available."}</p>
-                <div>
-                  <span>Tech Stack</span>
-                  <p>Fronted {" "}
-                    <b>{project.stack.fronted}</b>
+                <div className='mt-2'>
+                  <span className='underline font-bold'>Tech Stack</span>
+                  <p className='font-bold'>Fronted: {" "}
+                    <b className='font-semibold'>{project.stack.fronted}</b>
                   </p>
-                  <p>Backend
-                    <b>{project.stack.backend}</b>
+                  <p className='font-bold'>Backend: {" "}
+                    <b className='font-semibold'>{project.stack.backend}</b>
                   </p>
                 </div>
               </>
