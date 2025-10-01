@@ -29,7 +29,7 @@ const Header = () => {
             src={user.imagUrl}
             alt={"photo of " + user.name}
           />
-          <h1 className="text-white text-xl font-bold">{user.name}</h1>
+          <Link to={'/'} className="text-white text-xl font-bold">{user.name}</Link>
         </div>
 
         <nav className="hidden md:flex gap-6">
@@ -114,3 +114,12 @@ const navContents = [
   { label: "Contact", icon: <FaEnvelope />, path: "/contact" },
   // { label: "mode", icon: <FaMoon/>}
 ];
+
+
+
+
+
+
+
+
+

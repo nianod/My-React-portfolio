@@ -4,7 +4,7 @@ import blog from './Ui/blogcard'
 const blogPost = {
   image: "/Screenshot 2025-05-22 010859.png",  
   title: "WebSockets and REST APIs Explained",
-  link: "https://stackbyarnold-websockets.blogspot.com/2025/05/blog-post.html"
+  link: "https://stackbyarnold-websockets.blogspot.com/2025/10/websockets-vs-rest-apis-explained.html"
 }
 
 const Blogs = () => {
