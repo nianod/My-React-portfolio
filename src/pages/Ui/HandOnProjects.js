@@ -1,10 +1,10 @@
 let handOnProjects = [
   {
-    label: "We're Arnold Oicial site",
+    label: "We're Arnold Official site",
     source: "https://github.com/nianod/We-re-Arnold-Official",
     live: "https://we-re-arnold-official.vercel.app/",
     photo: "Screenshot from 2025-10-01 11-50-58.png",
-    name: "We're Arnold Oicial site",
+    name: "We're Arnold Official site",
     mode: "public",
     description: "a modern, responsive, and tech-inspired site that showcases our services, projects, pricing, and more as a team. Built with cutting-edge tools and a clean design, this site delivers both style and functionality.",
     stack: {
@@ -111,7 +111,7 @@ let handOnProjects = [
     description: "A full-stack E-Commerce web applicatin which Includes JWT authentication, user roles, admin dashboard, product management, and order tracking.",
     stack: {
       fronted: "React(TSX), Tailwind, Axios",
-      backend: "NodeJS, ExpressJS, MOngoDB, JWT, JOI"
+      backend: "NodeJS, ExpressJS, MongoDB, JWT, JOI"
     }
   },
   {
