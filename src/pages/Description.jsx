@@ -34,6 +34,15 @@ const Description = ({ description, setDescription, project }) => {
               <>
                 <h3 className="text-lg font-bold">{project.name}</h3>
                 <p className="mt-2">{project.description || "No description available."}</p>
+                <div>
+                  <span>Tech Stack</span>
+                  <p>Fronted {" "}
+                    <b>{project.stack.fronted}</b>
+                  </p>
+                  <p>Backend
+                    <b>{project.stack.backend}</b>
+                  </p>
+                </div>
               </>
             ) : (
               <p>No project selected.</p>
