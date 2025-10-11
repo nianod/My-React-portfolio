@@ -77,13 +77,13 @@ const Home = () => {
           <div className="sm:items-center sm:flex sm:justify-center w-full h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
           <div className="text-white mt-3">
             <p>
-              I'm a self-taught experienced and Passionate Full-Stack Developer from Kenya. I'm currently in my second
-              year studying Information Technology at Meru University.
-              I specialize in building responsive, accessible, scalable and
-              performant digital experiences that make a great impact.
-              I blend technology with passion to create solutions that shine.
-              My approach combines technical skills with business acumen gained
-              from my studies.
+              I'm a self-taught experienced and Passionate Full-Stack Developer
+              from Kenya. I'm currently in my second year studying Information
+              Technology at Meru University. I specialize in building
+              responsive, accessible, scalable and performant digital
+              experiences that make a great impact. I blend technology with
+              passion to create solutions that shine. My approach combines
+              technical skills with business acumen gained from my studies.
             </p>
             <Resime />
             <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 mb-5">
@@ -93,6 +93,14 @@ const Home = () => {
               My journey towards Tech is driven by curiosity and the desire to
               know how to and to create meaningful solutions which are digitized
             </b>
+            <div className="flex justify-center gap-3 mt-7 font-semibold">
+              <p className="sh p-2 rounded-md border-blue-600 border-[1.5px] bg-[#110413]">
+               <span> Experience 2+ years</span>
+              </p>
+              <span className="sh p-2 rounded-md border-blue-600 border-[1.5px] bg-[#110413]">
+                Projects 20+
+              </span>
+            </div>
             <div
               className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 data"
               data-aos="flip-up"
