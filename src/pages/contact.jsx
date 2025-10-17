@@ -9,19 +9,45 @@ const Contact = () => {
   const [messagePlaceholder, setMessagePlaceholder] = useState("Your message...");
   const [timestamp, setTimestamp] = useState(null)
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const now = new Date()
-    setTimestamp(now)
-    setSent(true);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const now = new Date()
+  //   setTimestamp(now)
+  //   setSent(true);
 
-    setNamePlaceholder("Full Name");
-    setPhoneNoPlaceholder("+25412345678");
-    setMessagePlaceholder("Your message...");
+  //   setNamePlaceholder("Full Name");
+  //   setPhoneNoPlaceholder("+25412345678");
+  //   setMessagePlaceholder("Your message...");
 
 
-  };
- 
+  // };
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+
+    const formData = {
+      namePlaceholder,
+      phoneNoPlaceholder,
+      messagePlaceholder
+    }
+
+    try {
+      const response = await("http://127.0.0.1:8000/", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(formData)
+      })
+      if(response.ok ){
+        setSent(true)
+        setTimestamp(new Date())
+      } else {
+        alert('Failed')
+        setSent(false)
+      }
+    } catch(err) {
+      console.error(err.message)
+    }
+  }
+  
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
     let currentIndex = 0;
