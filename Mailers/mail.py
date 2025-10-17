@@ -25,6 +25,13 @@ def send_message(params: Params):
     receiver_password = os.getenv("SENDER_PASSWORD")
 
 
+subject = f"you gat a message from{params.namePlaceholder}"
+body = f"""
+Name: {params.namePlaceholder}
+Phone_No: {params.phoneNoPlaceholder}
+Message: {params.messagePlaceholder}
+"""
+
 @app.get("/")
 def contact():
     return {"Hello": "Arnold, I saw you portfolio. Looks wow"}
