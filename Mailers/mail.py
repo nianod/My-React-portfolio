@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from typing import Union
 from pydantic import BaseModel
+import smtplib
+import os
+from dotenv import load_dotenv
+from email.mine.text import MINEText
+from email.mine.multipart import MINEMultipart
 
 class params(BaseModel):
     namePlaceholder: str
