@@ -4,6 +4,7 @@ import smtplib
 import os
 from dotenv import load_dotenv
 from email.mime.text import MIMEText
+from fastapi.middleware.cors import CORSMiddleware
 from email.mime.multipart import MIMEMultipart
 
  
@@ -15,6 +16,15 @@ class Params(BaseModel):
     messagePlaceholder: str
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = ["http://localhost:5173"],
+    allow_credentials = True,
+    allow_methods = ['*'],
+    allow_headers = ['*']
+)
+
 
 @app.post("/contact_me")
 def send_message(params: Params):

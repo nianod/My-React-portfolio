@@ -31,7 +31,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await("http://127.0.0.1:8000/", {
+      const response = await fetch("http://127.0.0.1:8000/contact_me", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(formData)
@@ -121,6 +121,7 @@ const Contact = () => {
             className="p-3 rounded bg-blue-800 text-white focus:outline-transparent"
             type="text"
             placeholder={namePlaceholder}
+            onChange={(e) => setNamePlaceholder(e.target.value)}
             required
           />
 
@@ -129,6 +130,7 @@ const Contact = () => {
             className="p-3 rounded bg-blue-800 text-white focus:outline-transparent"
             type="number"
             placeholder={phoneNoPlaceholder}
+            onChange={(e) => setPhoneNoPlaceholder(e.target.value)}
             required
           />
 
@@ -136,6 +138,7 @@ const Contact = () => {
           <textarea
             className="rounded p-3 bg-blue-800 text-white h-32 resize-none focus:outline-transparent"
             placeholder={messagePlaceholder}
+            onChange={(e) => setMessagePlaceholder(e.target.value)}
             required
           ></textarea>
 
