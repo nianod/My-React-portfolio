@@ -8,21 +8,12 @@ const Contact = () => {
   const [phoneNoPlaceholder, setPhoneNoPlaceholder] = useState("+25412345678");
   const [messagePlaceholder, setMessagePlaceholder] = useState("Your message...");
   const [timestamp, setTimestamp] = useState(null)
+  const [loading, setLoading] = useState(false)
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const now = new Date()
-  //   setTimestamp(now)
-  //   setSent(true);
-
-  //   setNamePlaceholder("Full Name");
-  //   setPhoneNoPlaceholder("+25412345678");
-  //   setMessagePlaceholder("Your message...");
-
-
-  // };
+ 
   const handleSubmit = async(e) => {
     e.preventDefault()
+    setLoading(true)
 
     const formData = {
       namePlaceholder,
@@ -31,20 +22,24 @@ const Contact = () => {
     }
 
     try {
-      const response = await("http://127.0.0.1:8000/", {
+      const response = await fetch("http://127.0.0.1:8000/contact_me", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(formData)
       })
       if(response.ok ){
+        
         setSent(true)
         setTimestamp(new Date())
       } else {
         alert('Failed')
         setSent(false)
+        setLoading(false)
       }
     } catch(err) {
       console.error(err.message)
+    } finally {
+      setLoading(false)
     }
   }
   
@@ -121,6 +116,7 @@ const Contact = () => {
             className="p-3 rounded bg-blue-800 text-white focus:outline-transparent"
             type="text"
             placeholder={namePlaceholder}
+            onChange={(e) => setNamePlaceholder(e.target.value)}
             required
           />
 
@@ -129,6 +125,7 @@ const Contact = () => {
             className="p-3 rounded bg-blue-800 text-white focus:outline-transparent"
             type="number"
             placeholder={phoneNoPlaceholder}
+            onChange={(e) => setPhoneNoPlaceholder(e.target.value)}
             required
           />
 
@@ -136,14 +133,16 @@ const Contact = () => {
           <textarea
             className="rounded p-3 bg-blue-800 text-white h-32 resize-none focus:outline-transparent"
             placeholder={messagePlaceholder}
+            onChange={(e) => setMessagePlaceholder(e.target.value)}
             required
           ></textarea>
 
           <button
-            className="p-2 w-50 text-white rounded-xl bg-blue-500 cursor-pointer m-auto mt-5 hover:bg-blue-400"
+            className={`p-2 w-50 text-white rounded-xl bg-blue-500 cursor-pointer m-auto mt-5 ${loading ? "cursor-not-allowed opacity-50" : "hover:bg-blue-400"}`}
             type="submit"
+            disabled={loading}
           >
-            {sent ? "Message sent!" : "Send Message"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
