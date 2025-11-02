@@ -115,12 +115,12 @@ let handOnProjects = [
     }
   },
   {
-    label: "Neighbourhood",
+    label: "Help-Hub",
     source: "https://github.com/nianod/Help-board-hub",
     live: "https://github.com/nianod/Help-board-hub",
     photo: "help-1013700_1280.webp",
     name: "Neighbourhood Help Hub",
-    mode: "private",
+    mode: "public",
     description: "A simple web based application that connects people who are looking for help with one's who are potential in offering it",
     stack: {
       fronted: "React(JSX), Tailwind, Typescript, AOS, MarkDown, Context API",
