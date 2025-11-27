@@ -1,14 +1,6 @@
-import React from "react";
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaWhatsapp, 
-  FaTwitter, 
-  FaInstagram,
-  FaHeart
-} from "react-icons/fa";
+ import {FaGithub, FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram,  FaHeart} from "react-icons/fa";
 
-// Constants
+ 
 const SOCIAL_LINKS = [
   { 
     icon: <FaGithub />, 
@@ -53,8 +45,7 @@ const Footer = () => {
     <footer className="relative z-40 mt-auto">
       <div className="bg-gradient-to-t from-gray-900 via-gray-900 to-gray-900 border-t border-gray-700/50">
         <div className="container mx-auto px-4">
-          {/* Social Links */}
-          <div className="flex justify-center py-6">
+           <div className="flex justify-center py-6">
             <div className="bg-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl px-6 py-4 shadow-2xl">
               <div className="flex gap-4">
                 {SOCIAL_LINKS.map((item, index) => (
