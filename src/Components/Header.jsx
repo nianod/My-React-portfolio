@@ -156,7 +156,7 @@ const Header = () => {
               className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/25"
             >
               <FaSuperpowers className="text-sm" />
-              <span>Support Us</span>
+              <span>Support me</span>
             </a>
           </div>
 
@@ -173,12 +173,12 @@ const Header = () => {
        {isOpen && (
         <>
            <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 lg:hidden"
             onClick={closeMenu}
           />
           
            <div
-            className={`bg-blue-500 fixed top-0 right-0 w-80 h-full  shadow-2xl border-l border-gray-700/50 z-50 transform transition-transform duration-500 ease-out lg:hidden ${
+            className={`bg-blue-500 fixed top-0 right-0 w-80 h-full  shadow-2xl border-l border-gray-700/50 z-40 transform transition-transform duration-500 ease-out lg:hidden ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           ><div className="rounded z-1000 bg-gradient-to-b from-gray-900 to-gray-800">
@@ -215,12 +215,8 @@ const Header = () => {
                 onClick={closeMenu}
               >
                 <FaSuperpowers />
-                <span>Support Our Work</span>
+                <span>Support my Work</span>
               </a>
-              
-              <div className="text-center text-gray-400 text-xs mt-4">
-                © {new Date().getFullYear()} {USER.name}
-              </div>
             </div>
             </div>
           </div>
