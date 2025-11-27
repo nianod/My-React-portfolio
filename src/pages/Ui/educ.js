@@ -13,7 +13,7 @@ const university ={
 const codespace = {
     school: "Codespace online Bootcamp",
     rank: "Full stack development",
-    date: "i 2025-ongoing",
+    date: " 2025-ongoing",
     contribution: "The place where innovation met real-world application"
 }
 export {softDev, university, codespace}
