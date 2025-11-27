@@ -95,7 +95,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      
+      <div>
       {description && (
         <Description 
           description={description} 
@@ -103,6 +103,7 @@ const Projects = () => {
           project={selectedProject}
         />
       )}
+      </div>
       
       <div className="pb-25 flex justify-center" data-aos="flip-right">
         <Link to={moreProjects.url} target="_blank">
