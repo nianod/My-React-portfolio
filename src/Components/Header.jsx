@@ -208,7 +208,7 @@ const Header = () => {
 
   <div className="p-6 border-t border-gray-700/50">
     <a
-      href="https://we-re-arnold-official.vercel.app/"
+      href="#"
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"

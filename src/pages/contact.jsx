@@ -98,7 +98,7 @@ const Contact = () => {
   }
 
   return (
-    <div data-aos="zoom-in" className='pb-20 mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-black py-12'>
+    <div data-aos="zoom-in" className='pb-20 mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-black'>
       <div className=" py-9 flex flex-col items-center mt-10">
         <h2 className="text-4xl font-bold text-blue-400 mb-2">Contact Me</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mx-auto" />
@@ -144,7 +144,7 @@ const Contact = () => {
             type="submit"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? "Sending..." : "Send Message"} 
           </button>
         </form>
       </div>
