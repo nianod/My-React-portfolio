@@ -12,13 +12,25 @@ let handOnProjects = [
       backend: "ExpressJs for message deliverly"
     }
   },
+   {
+    label: "Group-connect",
+    source: "https://github.com/nianod/Group-connect",
+    live: "group-connect-gamma.vercel.app",
+    photo: "group.jpeg",
+    name: "Group-connect",
+    mode: "public",
+    description: "Group Connect is a collaborative web platform designed to help students find study partners, form small learning groups, and organize study sessions based on shared subjects or interests. It promotes peer-to-peer learning, teamwork, and consistency among campus learners.",
+    stack: {
+      fronted: "React(TSX), Redux Toolkit, Tailwind, AOS, Framer Motion",
+      backend: "Python, FastAPI, Heroku, MongoDB"
+    }},
   {
     label: "Online Rental Management",
     source: "https://github.com/nianod/Stack-Rent/",
     live: "https://online-renting-six.vercel.app",
     photo: "Screenshot 2025-05-21 153717.png",
     name: "Online Rental Management",
-    mode: "public",
+    mode: "private",
     description: "A simple web base application or ease communication between the landlord and tenant. Allows new immigrants to look for any available vacants in the appartment. Landlord can post any updates on the specified panel as well as tenants making payments through the site",
       stack: {
       fronted: "Html, Css, Javascript",
