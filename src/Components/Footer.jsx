@@ -17,7 +17,7 @@ const roots = {
 const Footer = () => {
     return (
         <>
-      <div className="footer flex mt-3 flex-col items-center fixed w-full bottom-0 z-10 text-center py-2">
+      <div className="footer flex mt-3 flex-col items-center fixed w-full bottom-0 z-50 text-center py-2">
         <div className="flex gap-3 hover:transition-colors text-2xl">
             {FooterContents.map((item, index) => (
                 <a className="links" key={index} href={item.URL} target="_blank" rel="noopener noreferrer">{item.icon} </a>
