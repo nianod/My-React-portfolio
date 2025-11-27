@@ -1,124 +1,178 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import awinging from "./Ui/dummy";
 import Resime from "../Components/resime";
 
-const users = {
+// Constants
+const USER_DATA = {
   name: "Arnold's TECH",
   imageUrl: "/arnold.jpg",
   imageII: "/Screenshot 2025-05-01 181530.png",
 };
 
-const movingText = [
+const MOVING_TEXTS = [
   "Hello my name is Arnold...",
   "A Software Developer...",
   "Cybersecurity Enthusiast",
   "Can we collaborate?",
 ];
 
+const TYPING_SPEED = 150;
+const PAUSE_DURATION = 500;
+
 const Home = () => {
   const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
+  const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [speed] = useState(150);
 
-  useEffect(() => {
-    const currentString = movingText[index];
-    let timeout;
+  // Typing effect with useCallback for optimization
+  const typeEffect = useCallback(() => {
+    const currentText = MOVING_TEXTS[textIndex];
+    const shouldType = !isDeleting && text.length < currentText.length;
+    const shouldDelete = isDeleting && text.length > 0;
+    const shouldPause = !isDeleting && text.length === currentText.length;
+    const shouldMoveToNext = isDeleting && text.length === 0;
 
-    if (!isDeleting) {
-      if (text.length < currentString.length) {
-        timeout = setTimeout(() => {
-          setText(currentString.substring(0, text.length + 1));
-        }, speed);
-      } else {
-        timeout = setTimeout(() => {
-          setIsDeleting(true);
-        }, 500);
-      }
-    } else {
-      if (text.length > 0) {
-        timeout = setTimeout(() => {
-          setText(currentString.substring(0, text.length - 1));
-        }, speed / 2);
-      } else {
-        setIsDeleting(false);
-        setIndex((prev) => (prev + 1) % movingText.length);
-      }
+    if (shouldType) {
+      const timeout = setTimeout(() => {
+        setText(currentText.substring(0, text.length + 1));
+      }, TYPING_SPEED);
+      return () => clearTimeout(timeout);
     }
 
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, index, speed]);
+    if (shouldDelete) {
+      const timeout = setTimeout(() => {
+        setText(currentText.substring(0, text.length - 1));
+      }, TYPING_SPEED / 2);
+      return () => clearTimeout(timeout);
+    }
+
+    if (shouldPause) {
+      const timeout = setTimeout(() => setIsDeleting(true), PAUSE_DURATION);
+      return () => clearTimeout(timeout);
+    }
+
+    if (shouldMoveToNext) {
+      setIsDeleting(false);
+      setTextIndex((prev) => (prev + 1) % MOVING_TEXTS.length);
+    }
+  }, [text, isDeleting, textIndex]);
+
+  useEffect(() => {
+    const cleanup = typeEffect();
+    return cleanup;
+  }, [typeEffect]);
 
   return (
-    <>
-      <div className="flex justify-between pb-20 mt-15 p-5 Home">
-        <div className="max-w-sm">
-          <img
-            className="myimage w-[200px] h-[200px] object-cover rounded-full "
-            src={users.imageUrl}
-            alt={"Photo of " + users.name}
-          />
-          <h1 className="text-blue-500 font-bold text-4xl">{users.name}</h1>
-          <h2 className="text text-xl">
-            {text}
-            <span>|</span>
-          </h2>
-          <div className="job">
-            <span className="job-first">Transforming</span>
-            <br />
-            <span className="job-second">Ideas into Code</span>
-          </div>
-        </div>
-
-        <div className="about max-w-sm items-center ml-5 mb-20">
-          <h2 className="sm:items-center text-4xl font-bold text-blue-400 mb-2 text-center">
-            About Me
-          </h2>
-          <div className="sm:items-center sm:flex sm:justify-center w-full h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
-          <div className="text-white mt-3">
-            <p>
-              I'm a self-taught experienced and Passionate Full-Stack Developer
-              from Kenya. I'm currently in my second year studying Information
-              Technology at Meru University. I specialize in building
-              responsive, accessible, scalable and performant digital
-              experiences that make a great impact. I blend technology with
-              passion to create solutions that shine. My approach combines
-              technical skills with business acumen gained from my studies.
-            </p>
-            <Resime />
-            <div className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 mb-5">
-              <b>{awinging.digital}</b>
+    <div className="mt-10 mb-16 pb-16 min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+      <div className="container mx-auto px-4 py-8">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          
+          {/* Left Section - Profile */}
+          <div className="flex flex-col items-center lg:items-start space-y-6">
+            <div className="relative group">
+              <img
+                className="w-48 h-48 object-cover rounded-full border-4 border-blue-500 shadow-lg group-hover:scale-105 transition-transform duration-300"
+                src={USER_DATA.imageUrl}
+                alt={`Profile of ${USER_DATA.name}`}
+              />
+              <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-blue-300 transition-all duration-300" />
             </div>
-            <b className="mt-150block">
-              My journey towards Tech is driven by curiosity and the desire to
-              know how to and to create meaningful solutions which are digitized
-            </b>
-            <div className="flex justify-center gap-3 mt-7 font-semibold">
-              <p className="sh p-2 rounded-md border-blue-600 border-[1.5px] bg-[#110413]">
-               <span> Experience 2+ years</span>
+            
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                {USER_DATA.name}
+              </h1>
+              
+              <div className="mt-4 min-h-8">
+                <h2 className="text-xl font-semibold text-gray-300">
+                  {text}
+                  <span className="ml-1 animate-pulse">|</span>
+                </h2>
+              </div>
+
+              <div className="mt-6 space-y-2">
+                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                  Transforming
+                </div>
+                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
+                  Ideas into Code
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Middle Section - About Me */}
+          <div className="space-y-8">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+                About Me
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mx-auto" />
+            </div>
+
+            <div className="space-y-6">
+              <p className="text-gray-300 leading-relaxed text-lg">
+                I'm a self-taught experienced and passionate Full-Stack Developer 
+                from Kenya. Currently in my second year studying Information 
+                Technology at Meru University. I specialize in building responsive, 
+                accessible, scalable and performant digital experiences that make 
+                a great impact.
               </p>
-              <span className="sh p-2 rounded-md border-blue-600 border-[1.5px] bg-[#110413]">
-                Projects 20+
-              </span>
-            </div>
-            <div
-              className="swing text-fuchsia-500 border p-4 rounded-xl mt-10 data"
-              data-aos="flip-up"
-            >
-              <b>{awinging.future}</b>
+
+              <Resime />
+
+              {/* Highlight Cards */}
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 p-6 rounded-xl backdrop-blur-sm">
+                  <p className="text-fuchsia-300 font-semibold text-center">
+                    {awinging.digital}
+                  </p>
+                </div>
+
+                <blockquote className="text-gray-300 italic text-center border-l-4 border-blue-500 pl-4 py-2 bg-blue-900/20 rounded-r-lg">
+                  "My journey in tech is driven by curiosity and the desire to 
+                  create meaningful digital solutions that make a difference."
+                </blockquote>
+
+                {/* Stats */}
+                <div className="flex justify-center gap-4 mt-6">
+                  <div className="bg-blue-900/30 border border-blue-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
+                    <div className="text-2xl font-bold text-blue-300">2+</div>
+                    <div className="text-sm text-blue-200">Years Experience</div>
+                  </div>
+                  <div className="bg-green-900/30 border border-green-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
+                    <div className="text-2xl font-bold text-green-300">20+</div>
+                    <div className="text-sm text-green-200">Projects</div>
+                  </div>
+                </div>
+
+                <div 
+                  className="bg-gradient-to-r from-violet-900/50 to-fuchsia-900/50 border border-fuchsia-500/30 p-6 rounded-xl backdrop-blur-sm"
+                  data-aos="flip-up"
+                >
+                  <p className="text-fuchsia-300 font-semibold text-center">
+                    {awinging.future}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex justify-center items-center ">
-          <img
-            className="animating mr-5"
-            src={users.imageII}
-            alt={"photo of " + users.name}
-          />
+          {/* Right Section - Additional Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative group">
+              <img
+                className="animating border-2 border-gray-700 group-hover:border-blue-400 transition-all duration-500 group-hover:scale-105"
+                src={USER_DATA.imageII}
+                alt={`Work of ${USER_DATA.name}`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

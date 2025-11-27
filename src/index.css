@@ -188,7 +188,7 @@ body {
     margin-top: 40px;
   }
    
-  .myimage, .animating {
+  .myimage {
     width: 200px;
     height: 200px;
     
@@ -205,9 +205,6 @@ body {
   }
 }
   
-.animating {
-  margin-top: -300px;
-}
 @media (max-width: 480px) {
   .myimage {
     width: 120px;
@@ -232,26 +229,7 @@ body {
     width: 50px;
     height: 50px;
 }
-.langs, .frameworks, .dabs h3 {
-    color: white;
-}
-.langs, .frameworks, .dabs {
-     width: fit-content;
-    justify-content: center;
-    margin: 15px auto;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 8px 10px rgba(232, 230, 230, 0.8);
-    animation: side 2s infinite ease-in-out;
-}
-.single-language, .frame, .database {
-    align-items: center;
-    padding: 5px;
-    height: fit-content;
-    box-shadow: 0px 8px 5px rgba(33, 126, 197, 0.9);
-    animation: float 2s infinite ease-in-out;
-}
+  
 @keyframes float {
     0%, 100% {
         transform: translateY(0);

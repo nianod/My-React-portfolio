@@ -10,7 +10,7 @@ const languages = {
 const frameworks = {
     JSX: "React",
     Node: "Node js",
-    Express: "Express js",
+    FastAPI: "FastAPI",
     Next: "Next JS"
 }
 const dbs = {

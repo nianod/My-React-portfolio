@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram , FaDiscord} from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram} from "react-icons/fa"
 const FooterContents = [
     { icon: <FaGithub/>, URL: "https://github.com/nianod" },
     { icon: <FaLinkedin/>, URL: "https://linkedin.com/in/arnold-wanza-b51654330" },
@@ -17,7 +17,7 @@ const roots = {
 const Footer = () => {
     return (
         <>
-      <div className="footer flex mt-3 flex-col items-center fixed w-full bottom-0 z-40 text-center py-2">
+      <div className="footer flex mt-3 flex-col items-center fixed w-full bottom-0 z-10 text-center py-2">
         <div className="flex gap-3 hover:transition-colors text-2xl">
             {FooterContents.map((item, index) => (
                 <a className="links" key={index} href={item.URL} target="_blank" rel="noopener noreferrer">{item.icon} </a>
