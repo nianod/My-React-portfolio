@@ -54,7 +54,7 @@
   box-shadow: 2px 3px 22px blue;
 }
 body {
-  background: #242424;
+   background-image: linear-gradient(to bottom right, #111827, #000000);
 }
 .Navigation:hover {
   transform: translateY(-3px);
@@ -161,92 +161,4 @@ body {
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-.job {
-  font-family: Verdana;
-  font-weight: 900;
-}
-.job-first {
-  font-size: 30px;
-  color: rgb(255, 254, 254);
-}
-.text {
-  color: aqua;
-}
-.job-second {
-  font-size: 30px;
-  color: rgb(90, 90, 236);
-}
-
- 
-@media (max-width: 768px) {
-  .Home {
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-  }
-   
-  .myimage {
-    width: 200px;
-    height: 200px;
-    
-  }
-  .about {
-    margin-left: 0;
-    max-width: 100%;
-  }
-  .job-first, .job-second {
-    font-size: 24px;
-  }
-  .text {
-    font-size: 18px;
-  }
-}
-  
-@media (max-width: 480px) {
-  .myimage {
-    width: 120px;
-    height: 120px;
-  }
-  .job-first, .job-second {
-    font-size: 20px;
-  }
-  .text {
-    font-size: 16px;
-  }
-}
-
- .EXP {
-    max-width: 30rem;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
- }   
-.iconImg {
-    width: 50px;
-    height: 50px;
-}
-  
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-.bodaree {
-    box-shadow: 0 0 10px rgba(132, 132, 132, 0.7);
-}
-.projos {
-    background: linear-gradient(to right, #455cb6, #191964);
-    font-weight: bold;
-    transition: 1s ease ;
-}
-.projos:hover {
-    background: blue;
-    box-shadow: 0,0,10px rgba(192, 192, 195, 0.9);
 }
