@@ -67,6 +67,7 @@ const Contact = () => {
           <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
           <p className="text-white max-w-xl text-center mt-5">
             {displayedText}
+            
           </p>
         </div>
 
@@ -76,7 +77,7 @@ const Contact = () => {
           >
             <div data-aos="zoom-in" className="text-center mt-5 text-white">
               <h2 className="text-3xl font-bold text-green-400">
-                🎉 Thank You!
+                 Thank You!
               </h2>
               <p className="mt-4 text-lg">
                 Your message has been sent successfully. We'll get back to you
@@ -97,10 +98,11 @@ const Contact = () => {
   }
 
   return (
-    <div data-aos="zoom-in">
-      <div className=" py-4 flex flex-col items-center mt-10">
+    <div data-aos="zoom-in" className='pb-20 mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-black py-12'>
+      <div className=" py-9 flex flex-col items-center mt-10">
         <h2 className="text-4xl font-bold text-blue-400 mb-2">Contact Me</h2>
-        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mx-auto" />
+
         <p className="text-white max-w-xl text-center mt-5">{displayedText}</p>
       </div>
 

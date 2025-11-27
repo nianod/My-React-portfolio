@@ -33,7 +33,7 @@ const view = () => {
   return (
  <div data-aos="zoom-in-left" className="py-4 flex flex-col items-center mt-10 pb-25">
   <h2 className="text-4xl font-bold text-blue-400 mb-2">My Blogs</h2>
-  <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
+  <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mx-auto" />
   <p className="text-white max-w-xl text-center mt-5">{displayedText}</p>
 
   <div className="mt-10 p-6 bg-black border border-yellow-600 rounded-lg shadow-lg w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mx-auto max-w-2xl">

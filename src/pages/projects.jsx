@@ -1,119 +1,188 @@
+ import React, { useState, useCallback } from "react";
 import projectsc from "./Ui/projects";
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
 import handOnProjects from "./Ui/HandOnProjects";
 import Description from "./Description";
 
-const moreProjects = {
-  url: "https://github.com/nianod?tab=repositories",
-};
+const MORE_PROJECTS_URL = "https://github.com/nianod?tab=repositories";
 
 const Projects = () => {
-  const [displayedText, setDisplayedText] = useState("");
   const [description, setDescription] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  useEffect(() => {
-    let currentIndex = 0;
-    const typingSpeed = 10;
-
-    const type = () => {
-      if (currentIndex <= projectsc.head.length) {
-        setDisplayedText(projectsc.head.substring(0, currentIndex));
-        currentIndex++;
-        setTimeout(type, typingSpeed);
-      }
-    };
-
-    type();
-  }, []);
-
-  const handleDescriptionClick = (project) => {
+  const handleDescriptionClick = useCallback((project) => {
     setSelectedProject(project);
     setDescription(true);
-  };
+  }, []);
+
+  const ProjectCard = ({ project }) => (
+    <div
+      data-aos="fade-up"
+       
+      className="group relative bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden hover:scale-105 transition-all duration-500"
+    >
+ 
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute inset-[2px] rounded-2xl bg-gray-900" />
+      </div>
+
+      <div className="relative z-10">
+   
+        <div className="relative mb-4 overflow-hidden rounded-xl">
+          <img
+            src={project.photo}
+            alt={`Screenshot of ${project.label}`}
+            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          
+           
+        </div>
+
+      
+        <div className="mb-4">
+          <h3 className="text-xl font-bold text-white mb-2 line-clamp-1">
+            {project.label}
+          </h3>
+          <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+            {project.name}
+          </p>
+          
+      
+          {project.tech && (
+            <div className="flex flex-wrap gap-1 mb-3">
+              {project.tech.slice(0, 3).map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-xs"
+                >
+                  {tech}
+                </span>
+              ))}
+              {project.tech.length > 3 && (
+                <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs">
+                  +{project.tech.length - 3}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+
+         <div className="flex gap-2">
+          <a
+            href={project.mode === "private" ? undefined : project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex-1 text-center py-2 px-3 rounded-lg font-semibold transition-all duration-300 ${
+              project.mode === "private"
+                ? "bg-gray-700/50 text-gray-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-500/25"
+            }`}
+            onClick={(e) => project.mode === "private" && e.preventDefault()}
+          >
+            Live Demo
+          </a>
+          
+          <button
+            className="cursor-pointer flex-1 py-2 px-3 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/25"
+            onClick={() => handleDescriptionClick(project)}
+          >
+            Details
+          </button>
+          
+          <a
+            href={project.mode === "private" ? undefined : project.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex-1 text-center py-2 px-3 rounded-lg font-semibold transition-all duration-300 ${
+              project.mode === "private"
+                ? "bg-gray-700/50 text-gray-400 cursor-not-allowed"
+                : "bg-gray-700 hover:bg-gray-600 text-white shadow-lg hover:shadow-gray-500/25"
+            }`}
+            onClick={(e) => project.mode === "private" && e.preventDefault()}
+          >
+            Code
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+ 
 
   return (
-    <>
-      <div className="mt-15 flex flex-col items-center">
-        <h1 className="flex justify-center items-center text-4xl font-bold text-blue-400 mb-2">
-          My Projects
-        </h1>
-        <div className="w-3/4 h-1 rounded bg-gradient-to-r from-yellow-700 via-yellow-500 to-transparent"></div>
-        <p className="text-white text-center"> {displayedText} </p>
-      </div>
-      <div
-        data-aos="fade-up-left"
-        className="grid md:grid-cols-3 sm:grid-cols-1 gap-6 px-6 py-10"
-      >
-        {handOnProjects.map((item, index) => (
-          <div
-            key={index}
-            className="border border-yellow-500 rounded-lg p-4 bg-black shadow-lg hover:scale-105 transition"
-          >
-            <img
-              src={item.photo}
-              alt={`Screenshot of ${item.label}`}
-              className="w-full h-40 object-cover rounded mb-3"
-            />
-            <p className="text-white text-center">{item.name}</p>
-            <h2 className="font-bold text-lg text-center mb-2">{item.label}</h2>
-            <div className="flex justify-around">
-              <a
-                href={item.mode === "private" ? undefined : item.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`px-3 py-1 rounded text-white ${
-                  item.mode === "private"
-                    ? "bg-blue-900/50 cursor-not-allowed"
-                    : "bg-blue-600 hover:bg-blue-700"
-                }`}
-                onClick={(e) => item.mode === "private" && e.preventDefault()}
-              >
-                View Demo
-              </a>
-              <button 
-                className="px-3 py-1 rounded bg-yellow-600 text-white hover:bg-yellow-700 cursor-pointer"
-                onClick={() => handleDescriptionClick(item)}
-              >
-                Description
-              </button>
-              <a
-                href={item.mode === "private" ? undefined : item.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`px-3 py-1 rounded text-white ${
-                  item.mode === "private"
-                    ? "bg-gray-900 cursor-not-allowed"
-                    : "bg-gray-700 hover:bg-gray-800"
-                }`}
-                onClick={(e) => item.mode === "private" && e.preventDefault()}
-              >
-                {item.mode === "private" ? "Private repo" : "Source Code"}
-              </a>
+    <div className="pb-20 mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-black py-12">
+
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div data-aos="fade-up" className="mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+              My Projects
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mx-auto" />
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200" className="max-w-4xl mx-auto">
+            <div className="backdrop-blur-sm border rounded-2xl p-8">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed min-h-[120px] flex items-center justify-center">
+                {projectsc.head}  
+              </p>
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {handOnProjects.map((project, index) => (
+            <ProjectCard key={project.id || index} project={project} index={index} />
+          ))}
+        </div>
+
+        <div data-aos="flip-up" className="text-center">
+          <a
+            href={MORE_PROJECTS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+          >
+            <span>Explore All Projects</span>
+          </a>
+        </div>
+
+        <div data-aos="fade-up" className="text-center mt-16">
+          <div className="inline-flex gap-8 bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-400">{handOnProjects.length}+</div>
+              <div className="text-sm text-gray-400">Featured Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-400">
+                {handOnProjects.filter(p => p.mode !== "private").length}+
+              </div>
+              <div className="text-sm text-gray-400">Open Source</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-400">100%</div>
+              <div className="text-sm text-gray-400">Hands-On</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-      {description && (
-        <Description 
-          description={description} 
-          setDescription={setDescription}
-          project={selectedProject}
-        />
-      )}
+ 
+      <div className="relative z-50">
+        {description && (
+          <Description 
+            description={description} 
+            setDescription={setDescription}
+            project={selectedProject}
+          />
+        )}
       </div>
-      
-      <div className="pb-25 flex justify-center" data-aos="flip-right">
-        <Link to={moreProjects.url} target="_blank">
-          <button className="px-5 py-2 text-white rounded projos cursor-pointer">
-            More Projects
-          </button>
-        </Link>
-      </div>
-    </>
+    </div>
   );
 };
 
 export default Projects;
+
+
+
+  

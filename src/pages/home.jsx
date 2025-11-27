@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import awinging from "./Ui/dummy";
 import Resime from "../Components/resime";
 
-// Constants
-const USER_DATA = {
+ const USER_DATA = {
   name: "Arnold's TECH",
   imageUrl: "/arnold.jpg",
   imageII: "/Screenshot 2025-05-01 181530.png",
@@ -24,8 +23,7 @@ const Home = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // Typing effect with useCallback for optimization
-  const typeEffect = useCallback(() => {
+   const typeEffect = useCallback(() => {
     const currentText = MOVING_TEXTS[textIndex];
     const shouldType = !isDeleting && text.length < currentText.length;
     const shouldDelete = isDeleting && text.length > 0;
@@ -63,13 +61,11 @@ const Home = () => {
   }, [typeEffect]);
 
   return (
-    <div className="mt-10 mb-16 pb-16 min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+    <div className="mt-10 pb-5 min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
       <div className="container mx-auto px-4 py-8">
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           
-          {/* Left Section - Profile */}
-          <div className="flex flex-col items-center lg:items-start space-y-6">
+           <div className="flex flex-col items-center lg:items-start space-y-6">
             <div className="relative group">
               <img
                 className="w-48 h-48 object-cover rounded-full border-4 border-blue-500 shadow-lg group-hover:scale-105 transition-transform duration-300"
@@ -102,8 +98,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Middle Section - About Me */}
-          <div className="space-y-8">
+           <div className="space-y-8">
             <div className="text-center">
               <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
                 About Me
@@ -122,8 +117,7 @@ const Home = () => {
 
               <Resime />
 
-              {/* Highlight Cards */}
-              <div className="space-y-6">
+               <div className="space-y-6">
                 <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 p-6 rounded-xl backdrop-blur-sm">
                   <p className="text-fuchsia-300 font-semibold text-center">
                     {awinging.digital}
@@ -135,8 +129,7 @@ const Home = () => {
                   create meaningful digital solutions that make a difference."
                 </blockquote>
 
-                {/* Stats */}
-                <div className="flex justify-center gap-4 mt-6">
+                 <div className="flex justify-center gap-4 mt-6">
                   <div className="bg-blue-900/30 border border-blue-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
                     <div className="text-2xl font-bold text-blue-300">2+</div>
                     <div className="text-sm text-blue-200">Years Experience</div>
@@ -159,8 +152,7 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Right Section - Additional Image */}
-          <div className="flex justify-center lg:justify-end">
+           <div className="flex justify-center lg:justify-end">
             <div className="relative group">
               <img
                 className="animating border-2 border-gray-700 group-hover:border-blue-400 transition-all duration-500 group-hover:scale-105"

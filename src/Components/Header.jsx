@@ -91,7 +91,7 @@ const Header = () => {
         to={item.path}
         className={`group flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 relative ${
           isActive
-            ? "text-white bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg"
+            ? "text-white bg-gradient-to-r from-blue-800 to-blue-500 shadow-lg"
             : "text-gray-300 hover:text-white"
         }`}
       >
@@ -103,7 +103,7 @@ const Header = () => {
         )}
         
          {isActive && (
-          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-ping" />
+          <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-600 rounded-full animate-ping" />
         )}
       </Link>
     );
@@ -114,7 +114,7 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? "bg-gray-900/95 backdrop-blur-xl shadow-2xl border-b border-gray-700/50"
-          : "bg-gradient-to-r from-fuchsia-600 to-purple-600 shadow-lg"
+          : "bg-gradient-to-r from-gray-800 to-gray-900 shadow-lg"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -153,7 +153,7 @@ const Header = () => {
               href="https://we-re-arnold-official.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/25"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-800 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/25"
             >
               <FaSuperpowers className="text-sm" />
               <span>Support me</span>
