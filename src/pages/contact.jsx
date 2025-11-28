@@ -22,7 +22,8 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/contact_me", {
+      const Mail_URL = import.meta.env.MAIL_URL
+      const response = await fetch(`${Mail_URL}/contact_me`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(formData)
