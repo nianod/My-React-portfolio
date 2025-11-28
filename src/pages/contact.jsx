@@ -22,7 +22,7 @@ const Contact = () => {
     }
 
     try {
-      const Mail_URL = import.meta.env.MAIL_URL
+      const Mail_URL = import.meta.env.VITE_MAIL_URL
       const response = await fetch(`${Mail_URL}/contact_me`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
