@@ -1,48 +1,44 @@
 import React, { useState, useEffect } from 'react'
-import Footer from '../Components/Footer'
 import reach from './Ui/conts'
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
   const [sent, setSent] = useState(false);
-  const [namePlaceholder, setNamePlaceholder] = useState("Full Name");
-  const [phoneNoPlaceholder, setPhoneNoPlaceholder] = useState("+25412345678");
-  const [messagePlaceholder, setMessagePlaceholder] = useState("Your message...");
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
   const [timestamp, setTimestamp] = useState(null)
   const [loading, setLoading] = useState(false)
 
- 
-  const handleSubmit = async(e) => {
-    e.preventDefault()
-    setLoading(true)
 
-    const formData = {
-      namePlaceholder,
-      phoneNoPlaceholder,
-      messagePlaceholder
-    }
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-    try {
-      const Mail_URL = import.meta.env.VITE_MAIL_URL
-      const response = await fetch(`${Mail_URL}/contact_me`, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(formData)
-      })
-      if(response.ok ){
-        
-        setSent(true)
-        setTimestamp(new Date())
-      } else {
-        alert('Failed')
-        setSent(false)
-        setLoading(false)
-      }
-    } catch(err) {
-      console.error(err.message)
-    } finally {
-      setLoading(false)
-    }
-  }
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const templateParams = {
+    name,
+    phone,
+    message,
+  };
+
+  emailjs
+    .send(serviceID, templateID, templateParams, publicKey)
+    .then((response) => {
+      setSent(true);
+      setTimestamp(new Date());
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message");
+      setLoading(false);
+    });
+};
+
   
   const [displayedText, setDisplayedText] = useState("");
   useEffect(() => {
@@ -118,8 +114,9 @@ const Contact = () => {
           <input
             className="p-3 rounded bg-blue-800 text-white focus:outline-transparent"
             type="text"
-            placeholder={namePlaceholder}
-            onChange={(e) => setNamePlaceholder(e.target.value)}
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
 
@@ -127,16 +124,18 @@ const Contact = () => {
           <input
             className="p-3 rounded bg-blue-800 text-white focus:outline-transparent"
             type="number"
-            placeholder={phoneNoPlaceholder}
-            onChange={(e) => setPhoneNoPlaceholder(e.target.value)}
+            placeholder='254712345678'
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             required
           />
 
           <label>Message* </label>
           <textarea
             className="rounded p-3 bg-blue-800 text-white h-32 resize-none focus:outline-transparent"
-            placeholder={messagePlaceholder}
-            onChange={(e) => setMessagePlaceholder(e.target.value)}
+            placeholder="Type your message..."
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
             required
           ></textarea>
 
