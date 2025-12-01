@@ -61,7 +61,7 @@ const Home = () => {
   }, [typeEffect]);
 
   return (
-    <div className="mt-10 pb-5 min-h-screen bg-gradient-to-br from-gray-900 to-black text-white">
+    <div className="mt-10 pb-5 min-h-screen bg-gradient-to-br from-gray-900/9o-black/90 relative z-10">
       <div className="container mx-auto px-4 py-8">
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           
