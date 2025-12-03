@@ -11,7 +11,7 @@ import Contact from "./pages/contact";
 import Layout from "./Components/layout";
 import ParticleBackground from "./ParticleBackground";
 
-const App = () => {
+const App = () => { 
   useEffect(() => {
     AOS.init({
       duration: 1000,
