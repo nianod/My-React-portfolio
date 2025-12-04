@@ -1,4 +1,4 @@
- import {FaGithub, FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram,  FaHeart} from "react-icons/fa";
+ import {FaGithub, FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram} from "react-icons/fa";
 
  
 const SOCIAL_LINKS = [
@@ -67,13 +67,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 py-4">
+           <div className="bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 py-4">
             <div className="container mx-auto px-4">
               <div className="flex flex-col md:flex-row items-center justify-between gap-3">
                 <div className="flex items-center gap-2 text-gray-300">
-                  <span>Made with</span>
-                  <FaHeart className="text-red-500 animate-pulse" />
+                  <span>Crafted with Passion</span>
                   <span>by {FOOTER_INFO.name}</span>
                 </div>
                 
@@ -84,7 +82,7 @@ const Footer = () => {
                 </div>
 
                 <div className="text-gray-400 text-sm">
-                  <span>Built with React & Tailwind</span>
+                  <span>Hire me</span>
                 </div>
               </div>
             </div>
@@ -96,3 +94,18 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

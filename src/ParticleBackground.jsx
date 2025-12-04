@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const ParticleBackground = () => {
   const canvasRef = useRef(null);
@@ -19,12 +19,17 @@ const ParticleBackground = () => {
         this.size = size;
         this.color = color;
       }
+
       
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
         ctx.fillStyle = '#00ffff';  
-        ctx.fill();
+        ctx.fill()
+
+
+
+        
       }
       
       update() {
@@ -61,7 +66,7 @@ const ParticleBackground = () => {
           const distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) + 
                           ((particlesArray[a].y - particlesArray[b].y) ** 2);
           if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-            opacityValue = 1 - (distance / 20000);
+            opacityValue = 1 - (distance / 10000);
             ctx.strokeStyle = `rgba(0, 255, 255, ${opacityValue})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
