@@ -25,16 +25,16 @@ let handOnProjects = [
       backend: "Python, FastAPI, Heroku, MongoDB"
     }},
   {
-    label: "Online Rental Management",
-    source: "https://github.com/nianod/Stack-Rent/",
+    label: "Online Rental system Management",
+    source: "https://github.com/nianod/Stack-Rent",
     live: "https://online-renting-six.vercel.app",
-    photo: "Screenshot 2025-05-21 153717.png",
-    name: "Online Rental Management",
+    photo: "Screenshot from 2025-12-21 19-49-43.png",
+    name: "Online Rental system Management",
     mode: "private",
     description: "A simple web base application or ease communication between the landlord and tenant. Allows new immigrants to look for any available vacants in the appartment. Landlord can post any updates on the specified panel as well as tenants making payments through the site",
       stack: {
-      fronted: "Html, Css, Javascript",
-      backend: "-"
+      fronted: "NextJs, Typescript,Javascript, Prisma ORM",
+      backend: "NextJs, MongoDB"
     }
   },
   {
@@ -74,18 +74,6 @@ let handOnProjects = [
       fronted: "React(JSX), Taliwind",
       backend: "Node.js with Express.js"
     }    
-  },
-  {
-    label: "Airbnb looks",
-    source: "https://github.com/nianod/Airbnb-clone",
-    live: "https://airbnb-look-alike.vercel.app//",
-    photo: "Screenshot 2025-06-15 132700.png",
-    name: "Airbnb look alike",
-    mode: "public",
-    stack: {
-      fronted: "Html & Css",
-      backend: "-"
-    }
   },
   {
     label: "Car shelf",
