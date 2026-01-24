@@ -30,11 +30,11 @@ let handOnProjects = [
     live: "https://online-renting-six.vercel.app",
     photo: "Screenshot from 2025-12-21 19-49-43.png",
     name: "Online Rental system Management",
-    mode: "private",
+    mode: "public",
     description: "A simple web base application or ease communication between the landlord and tenant. Allows new immigrants to look for any available vacants in the appartment. Landlord can post any updates on the specified panel as well as tenants making payments through the site",
       stack: {
       fronted: "NextJs, Typescript,Javascript, Prisma ORM",
-      backend: "NextJs, MongoDB"
+      backend: "App Router Architecture, MongoDB"
     }
   },
   {
