@@ -1,17 +1,4 @@
 let handOnProjects = [
-  {
-    label: "We're Arnold Official site",
-    source: "https://github.com/nianod/We-re-Arnold-Official",
-    live: "https://we-re-arnold-official.vercel.app/",
-    photo: "Screenshot from 2025-10-01 11-50-58.png",
-    name: "We're Arnold Official site",
-    mode: "public",
-    description: "a modern, responsive, and tech-inspired site that showcases our services, projects, pricing, and more as a team. Built with cutting-edge tools and a clean design, this site delivers both style and functionality.",
-    stack: {
-      fronted: "React(JSX), Context API, Framer Motion",
-      backend: "ExpressJs for message deliverly"
-    }
-  },
    {
     label: "Group-connect",
     source: "https://github.com/nianod/Group-connect",
@@ -25,11 +12,11 @@ let handOnProjects = [
       backend: "Python, FastAPI, Heroku, MongoDB"
     }},
   {
-    label: "Online Rental system Management",
-    source: "https://github.com/nianod/Stack-Rent",
-    live: "https://online-renting-six.vercel.app",
+    label: " Rental system Management",
+    source: "https://github.com/nianod/Rental-management-system",
+    live: "https://rental-management-system-tau.vercel.app",
     photo: "Screenshot from 2025-12-21 19-49-43.png",
-    name: "Online Rental system Management",
+    name: " Rental system Management",
     mode: "public",
     description: "A simple web base application or ease communication between the landlord and tenant. Allows new immigrants to look for any available vacants in the appartment. Landlord can post any updates on the specified panel as well as tenants making payments through the site",
       stack: {
