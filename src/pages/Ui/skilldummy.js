@@ -5,7 +5,7 @@ const languages = {
     Js: "Javascript",
     Py: "Python",
     Ts: "Typescript",
-    HtM: "HTML & CSS"
+    Go: 'Golang'
 }
 const frameworks = {
     JSX: "React",

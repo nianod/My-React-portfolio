@@ -36,7 +36,7 @@ const SOCIAL_LINKS = [
 
 const FOOTER_INFO = {
   name: "Arnold",
-  year: 2025,
+  year: 2026,
   rights: "All rights reserved"
 };
 

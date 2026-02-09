@@ -18,12 +18,12 @@ const Projects = () => {
     <div
       data-aos="fade-up"
        
-      className="group relative bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden hover:scale-105 transition-all duration-500"
+      className="group relative bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden transition-all duration-500"
     >
  
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0  " />
       
-       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-900 to-blue-500 opacity-0 ">
         <div className="absolute inset-[2px] rounded-2xl bg-gray-900" />
       </div>
 
@@ -33,7 +33,7 @@ const Projects = () => {
           <img
             src={project.photo}
             alt={`Screenshot of ${project.label}`}
-            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-48 object-cover transition-transform duration-500 "
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
@@ -85,7 +85,7 @@ const Projects = () => {
           </a>
           
           <button
-            className="cursor-pointer flex-1 py-2 px-3 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/25"
+            className="cursor-pointer flex-1 py-2 px-3 bg-gradient-to-r from-green-600 to-green-600 text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-green-500/25"
             onClick={() => handleDescriptionClick(project)}
           >
             Details
@@ -142,7 +142,7 @@ const Projects = () => {
             href={MORE_PROJECTS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300    "
           >
             <span>Explore All Projects</span>
           </a>
@@ -155,13 +155,13 @@ const Projects = () => {
               <div className="text-sm text-gray-400">Featured Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-green-400">
+              <div className="text-2xl font-bold text-blue-400">
                 {handOnProjects.filter(p => p.mode !== "private").length}+
               </div>
               <div className="text-sm text-gray-400">Open Source</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">100%</div>
+              <div className="text-2xl font-bold text-blue-400">100%</div>
               <div className="text-sm text-gray-400">Hands-On</div>
             </div>
           </div>

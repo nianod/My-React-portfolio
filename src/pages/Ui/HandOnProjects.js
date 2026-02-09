@@ -2,7 +2,7 @@ let handOnProjects = [
    {
     label: "Group-connect",
     source: "https://github.com/nianod/Group-connect",
-    live: "group-connect-gamma.vercel.app",
+    live: "https://group-connect-gamma.vercel.app",
     photo: "group.jpeg",
     name: "Group-connect",
     mode: "public",
@@ -78,7 +78,7 @@ let handOnProjects = [
   {
     label: "Chat app",
     source: "https://github.com/nianod/Supabase-Chat-APP",
-    live: "https://github.com/nianod/Supabase-Chat-APP",
+    live: "https://supabase-chat-app-rho.vercel.app",
     photo: "Screenshot 2025-08-01 231103.png",
     name: "Chat App",
     mode: "public",
