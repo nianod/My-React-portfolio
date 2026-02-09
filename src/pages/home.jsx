@@ -3,7 +3,7 @@ import awinging from "./Ui/dummy";
 import Resime from "../Components/resime";
 
  const USER_DATA = {
-  name: "Arnold's TECH",
+  name: "Arnold Katumo",
   imageUrl: "/arnold.jpg",
   imageII: "/Screenshot 2025-05-01 181530.png",
 };
@@ -88,7 +88,7 @@ const Home = () => {
               </div>
 
               <div className="mt-6 space-y-2">
-                <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                <div className="text-2xl font-bold text-transparent bg-clip-text bg-blue-400">
                   Transforming
                 </div>
                 <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
@@ -118,8 +118,8 @@ const Home = () => {
               <Resime />
 
                <div className="space-y-6">
-                <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 p-6 rounded-xl backdrop-blur-sm">
-                  <p className="text-fuchsia-300 font-semibold text-center">
+                <div className="bg-transparent border border-blue-500/30 p-6 rounded-xl backdrop-blur-sm">
+                  <p className="text-green-300 font-semibold text-center">
                     {awinging.digital}
                   </p>
                 </div>
@@ -141,10 +141,10 @@ const Home = () => {
                 </div>
 
                 <div 
-                  className="bg-gradient-to-r from-violet-900/50 to-fuchsia-900/50 border border-fuchsia-500/30 p-6 rounded-xl backdrop-blur-sm"
+                  className="bg-transparent border border-blue-500/30 p-6 rounded-xl backdrop-blur-sm"
                   data-aos="flip-up"
                 >
-                  <p className="text-fuchsia-300 font-semibold text-center">
+                  <p className="text-green-300 font-semibold text-center">
                     {awinging.future}
                   </p>
                 </div>

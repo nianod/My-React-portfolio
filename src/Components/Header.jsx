@@ -71,17 +71,15 @@ const Header = () => {
           onClick={closeMenu}
           className={`flex items-center gap-3 p-4 text-lg font-semibold rounded-xl transition-all duration-300 border-b border-gray-700/50 ${
             isActive
-              ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+              ? "bg-gradient-to-r from-green-600 to-green-600 text-white shadow-lg"
               : "text-gray-300 hover:bg-white/10 hover:text-white"
           }`}
         >
-          <span className={`text-xl ${isActive ? "text-white" : "text-fuchsia-400"}`}>
+          <span className={`text-xl ${isActive ? "text-white" : "text-green-400"}`}>
             {item.icon}
           </span>
           <span>{item.label}</span>
-          {isActive && (
-            <div className="ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          )}
+        
         </Link>
       );
     }
@@ -99,11 +97,11 @@ const Header = () => {
         <span className="font-semibold">{item.label}</span>
         
          {!isActive && (
-          <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-fuchsia-400 transition-all duration-300 group-hover:w-3/4 group-hover:left-1/4" />
+          <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-green-400 transition-all duration-300 group-hover:w-3/4 group-hover:left-1/4" />
         )}
         
          {isActive && (
-          <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-600 rounded-full animate-ping" />
+          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-600 rounded-full animate-ping" />
         )}
       </Link>
     );
@@ -185,7 +183,7 @@ const Header = () => {
   <div className="flex items-center justify-between p-6 border-b border-gray-700/50">
               <div className="flex items-center gap-3">
                 <img
-                  className="w-10 h-10 object-cover rounded-full border-2 border-fuchsia-500"
+                  className="w-10 h-10 object-cover rounded-full border-2 border-green-500"
                   src={USER.imageUrl}
                   alt={`Profile of ${USER.name}`}
                 />
@@ -193,7 +191,7 @@ const Header = () => {
               </div>
               <button
                 onClick={closeMenu}
-                className="cursor-pointer text-gray-400 hover:text-white text-2xl p-2 hover:bg-white/10 rounded-xl transition-colors duration-300"
+                className="cursor-pointer text-gray-400 hover:text-white text-2xl p-2  rounded-xl transition-colors duration-300"
                 aria-label="Close menu"
               >
                 <FaTimes />
@@ -211,7 +209,7 @@ const Header = () => {
       href="https://my-payment-brown.vercel.app"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+      className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-blue-700 to-blue-700 text-white rounded-xl font-semibold hover:transition-transform duration-300 shadow-lg"
       onClick={closeMenu}
     >
       <FaSuperpowers />

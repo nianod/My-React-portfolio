@@ -12,7 +12,7 @@ const SKILL_CATEGORIES = [
       { icon: icons.jS, name: languages.Js },
       { icon: icons.py, name: languages.Py },
       { icon: icons.ts, name: languages.Ts },
-      { icon: [icons.html, icons.css], name: languages.HtM }
+      { icon: icons.go, name: languages.Go }
     ]
   },
   {

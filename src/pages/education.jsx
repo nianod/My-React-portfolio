@@ -6,8 +6,7 @@ import { FaGraduationCap, FaLaptop, FaAd, FaInfinity } from "react-icons/fa";
   message: "While I don't have a traditional academic background in this field, my journey has been driven by curiosity, discipline, and a passion for continuous learning. Through self-guided study, online courses, hands-on projects, and real-world problem-solving, I've built a strong foundation and practical skills that reflect my commitment to growth and excellence."
 };
 
-const TYPING_SPEED = 5;
-const EDUCATION_DATA = [
+ const EDUCATION_DATA = [
   {
     ...university,
     animation: "fade-left",
@@ -23,41 +22,18 @@ const EDUCATION_DATA = [
   {
     ...codespace,
     animation: "flip-down",
-    color: "from-purple-600 to-purple-800",
+    color: "from-blue-600 to-blue-800",
     icon: <FaAd />
   }
 ];
 
 const Education = () => {
-  const [displayedText, setDisplayedText] = useState("");
-  const [isTypingComplete, setIsTypingComplete] = useState(false);
-
-   const startTypingEffect = useCallback(() => {
-    let currentIndex = 0;
-    const text = EDUCATION_TEXT.message;
-
-    const type = () => {
-      if (currentIndex <= text.length) {
-        setDisplayedText(text.substring(0, currentIndex));
-        currentIndex++;
-        setTimeout(type, TYPING_SPEED);
-      } else {
-        setIsTypingComplete(true);
-      }
-    };
-
-    type();
-  }, []);
-
-  useEffect(() => {
-    startTypingEffect();
-  }, [startTypingEffect]);
-
+ 
    const EducationCard = ({ education, index }) => (
     <div 
       data-aos={education.animation}
       data-aos-delay={index * 200}
-      className="group relative w-full max-w-2xl mb-6 transition-all duration-500 hover:scale-105"
+      className="group relative w-full max-w-2xl mb-6 transition-all duration-500"
     >
       <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden">
          <div className={`absolute inset-0 bg-gradient-to-r ${education.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`} />
@@ -83,7 +59,7 @@ const Education = () => {
             <h3 className="text-lg font-semibold text-white mb-1">
               {education.rank}
             </h3>
-            <div className="w-12 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full" />
+             
           </div>
 
            <div className="bg-gray-800/50 rounded-lg p-4 border-l-4 border-blue-500">
@@ -109,25 +85,14 @@ const Education = () => {
           </div>
 
            <div data-aos="fade-up" data-aos-delay="200" className="max-w-4xl mx-auto">
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                {displayedText}
-                <span className={`ml-1 ${isTypingComplete ? 'opacity-0' : 'animate-pulse'}`}>
-                  |
-                </span>
-              </p>
-              {isTypingComplete && (
-                <div className="flex items-center justify-center gap-2 mt-4 text-sm text-green-400">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  <span>Continuous Learner</span>
-                </div>
-              )}
-            </div>
+               <p className="text-gray-300 text-xl space-y-2">
+                 {EDUCATION_TEXT.message}
+               </p>
           </div>
         </div>
 
          <div className="relative max-w-4xl mx-auto">
-           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-green-500 rounded-full opacity-20" />
+           
           
            <div className="space-y-8">
             {EDUCATION_DATA.map((education, index) => (
@@ -146,7 +111,7 @@ const Education = () => {
          <div data-aos="fade-up" className="text-center mt-16">
           <div className="inline-flex gap-8 bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-400">{EDUCATION_DATA.length}</div>
+              <div className="text-2xl font-bold text-green-400">{EDUCATION_DATA.length}</div>
               <div className="text-sm text-gray-400">Educational Milestones</div>
             </div>
             <div className="text-center">
@@ -154,7 +119,7 @@ const Education = () => {
               <div className="text-sm text-gray-400">Self-Taught Commitment</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400"><FaInfinity /></div>
+              <div className="text-2xl font-bold text-green-400"><FaInfinity /></div>
               <div className="text-sm text-gray-400">Continuous Growth</div>
             </div>
           </div>
