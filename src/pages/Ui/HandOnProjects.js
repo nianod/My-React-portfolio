@@ -57,6 +57,7 @@ let handOnProjects = [
     photo: "Screenshot 2025-06-13 101018.png",
     name: "Github profile Finder",
     mode: "public",
+    description: "Site that allows users to search for GitHub profiles and view their details, including repositories, followers, and more.",
     stack: {
       fronted: "React(JSX), Taliwind",
       backend: "Node.js with Express.js"
