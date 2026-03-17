@@ -9,11 +9,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow:
-    0 0 10px 5px rgba(0, 255, 255, 0.5),
-    0 0 20px 10px rgba(255, 0, 255, 0.3),
-    0 0 30px 15px rgba(0, 255, 255, 0.2),
-    0 0 30px 15px rgba(244, 0, 255, 0.4);
+ 
   animation: rotate 10s linear infinite;
 }
 @keyframes rotate {
