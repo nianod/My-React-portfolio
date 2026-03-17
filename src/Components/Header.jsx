@@ -100,9 +100,7 @@ const Header = () => {
           <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-green-400 transition-all duration-300 group-hover:w-3/4 group-hover:left-1/4" />
         )}
         
-         {isActive && (
-          <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-600 rounded-full animate-ping" />
-        )}
+       
       </Link>
     );
   };
