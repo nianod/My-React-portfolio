@@ -28,9 +28,9 @@ let handOnProjects = [
   },
   {
     label: "Chat app",
-    source: "https://github.com/nianod/Supabase-Chat-APP",
-    live: "https://supabase-chat-app-rho.vercel.app",
-    photo: "Screenshot 2025-08-01 231103.png",
+    source: "https://github.com/nianod/Custom-Load-Balancer",
+    live: "https://c-odecommander.github.io/load-bal-doc",
+    photo: "download.png",
     name: "Chat App",
     mode: "public",
     description: "This is a realtime chat app which allow users to sign in with Google, send messages, and see them instantly update across all connected users.",
@@ -39,6 +39,20 @@ let handOnProjects = [
       backend: "Supabase sockets & Google Auth"
     }
   },
+  {
+        label: "Load Balancer",
+    source: "https://github.com/nianod/Supabase-Chat-APP",
+    live: "https://supabase-chat-app-rho.vercel.app",
+    photo: "Screenshot 2025-08-01 231103.png",
+    name: "Load Balancer",
+    mode: "public",
+    description: "A production-ready HTTP/HTTPS load balancer with Round Robin, Weighted Round Robin, Health Checks, Sticky Sessions, TLS, and live JSON Metrics.",
+    stack: {
+      fronted: "Go, Shell, scripts",
+      backend: "NA"
+    }
+  },
+  
  {
     label: "Group-connect",
     source: "https://github.com/nianod/Group-connect",
