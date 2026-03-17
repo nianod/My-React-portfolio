@@ -68,7 +68,7 @@ const Home = () => {
            <div className="flex flex-col items-center lg:items-start space-y-6">
             <div className="relative group">
               <img
-                className="w-48 h-48 object-cover rounded-full border-4 border-blue-500 shadow-lg group-hover:scale-105 transition-transform duration-300"
+                className="w-48 h-48 object-cover rounded-full border-4 border-blue-500 shadow-lg  transition-transform duration-300"
                 src={USER_DATA.imageUrl}
                 alt={`Profile of ${USER_DATA.name}`}
               />

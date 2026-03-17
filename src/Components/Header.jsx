@@ -115,7 +115,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-3">
-           <Link
+          <Link
             to="/"
             className="flex items-center gap-3 group"
             onClick={closeMenu}
@@ -138,84 +138,90 @@ const Header = () => {
             </div>
           </Link>
 
-           <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {NAV_CONTENTS.map((item) => (
               <NavLink key={item.path} item={item} />
             ))}
           </nav>
 
-           <div className="hidden md:flex">
+          <div className="hidden md:flex">
             <a
               href="https://my-payment-brown.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-800 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-orange-500/25"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-800 to-blue-500 text-white rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg "
             >
               <FaSuperpowers className="text-sm" />
               <span>Support me</span>
             </a>
           </div>
 
-           <button
+          <button
             onClick={toggleMenu}
             className="lg:hidden flex cursor-pointer flex-col items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-xl transition-colors duration-300"
             aria-label="Toggle menu"
           >
-            {isOpen ? <FaTimes className="text-xl" /> : <FaBars className="text-xl" />}
+            {isOpen ? (
+              <FaTimes className="text-xl" />
+            ) : (
+              <FaBars className="text-xl" />
+            )}
           </button>
         </div>
       </div>
 
-       {isOpen && (
+      {isOpen && (
         <>
-           <div
+          <div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 lg:hidden"
             onClick={closeMenu}
           />
-          
-           <div
+
+          <div
             className={`fixed top-0 right-0 w-80 h-full  shadow-2xl border-l border-gray-700/50 z-40 transform transition-transform duration-500 ease-out lg:hidden ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
-          ><div className="rounded z-1000 bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col h-full">
-  <div className="flex items-center justify-between p-6 border-b border-gray-700/50">
-              <div className="flex items-center gap-3">
-                <img
-                  className="w-10 h-10 object-cover rounded-full border-2 border-green-500"
-                  src={USER.imageUrl}
-                  alt={`Profile of ${USER.name}`}
-                />
-                <span className="text-white font-bold text-lg">{USER.name}</span>
+          >
+            <div className="rounded z-1000 bg-gradient-to-b from-gray-900 to-gray-800 flex flex-col h-full">
+              <div className="flex items-center justify-between p-6 border-b border-gray-700/50">
+                <div className="flex items-center gap-3">
+                  <img
+                    className="w-10 h-10 object-cover rounded-full border-2 border-green-500"
+                    src={USER.imageUrl}
+                    alt={`Profile of ${USER.name}`}
+                  />
+                  <span className="text-white font-bold text-lg">
+                    {USER.name}
+                  </span>
+                </div>
+                <button
+                  onClick={closeMenu}
+                  className="cursor-pointer text-gray-400 hover:text-white text-2xl p-2  rounded-xl transition-colors duration-300"
+                  aria-label="Close menu"
+                >
+                  <FaTimes />
+                </button>
               </div>
-              <button
-                onClick={closeMenu}
-                className="cursor-pointer text-gray-400 hover:text-white text-2xl p-2  rounded-xl transition-colors duration-300"
-                aria-label="Close menu"
-              >
-                <FaTimes />
-              </button>
+
+              <nav className="flex-1 p-6 space-y-2 g-blue-900">
+                {NAV_CONTENTS.map((item) => (
+                  <NavLink key={item.path} item={item} isMobile={true} />
+                ))}
+              </nav>
+
+              <div className="p-6 border-t border-gray-700/50">
+                <a
+                  href="https://my-payment-brown.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-blue-700 to-blue-700 text-white rounded-xl font-semibold hover:transition-transform duration-300 shadow-lg"
+                  onClick={closeMenu}
+                >
+                  <FaSuperpowers />
+                  <span>Support my Work</span>
+                </a>
+              </div>
             </div>
-
-         <nav className="flex-1 p-6 space-y-2 g-blue-900">
-    {NAV_CONTENTS.map((item) => (
-      <NavLink key={item.path} item={item} isMobile={true} />
-    ))}
-  </nav>
-
-  <div className="p-6 border-t border-gray-700/50">
-    <a
-      href="https://my-payment-brown.vercel.app"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-blue-700 to-blue-700 text-white rounded-xl font-semibold hover:transition-transform duration-300 shadow-lg"
-      onClick={closeMenu}
-    >
-      <FaSuperpowers />
-      <span>Support my Work</span>
-    </a>
-  </div>
-</div>
-
           </div>
         </>
       )}

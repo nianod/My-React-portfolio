@@ -1,16 +1,18 @@
 let handOnProjects = [
    {
-    label: "Group-connect",
-    source: "https://github.com/nianod/Group-connect",
-    live: "https://group-connect-gamma.vercel.app",
-    photo: "group.jpeg",
-    name: "Group-connect",
+    label: "Arnold Sellers",
+    source: "https://github.com/nianod/MERN-E-COMMERCE",
+    live: "https://github.com/nianod/MERN-E-COMMERCE",
+    photo: "download.jpeg",
+    name: "E-commerce site",
     mode: "public",
-    description: "Group Connect is a collaborative web platform designed to help students find study partners, form small learning groups, and organize study sessions based on shared subjects or interests. It promotes peer-to-peer learning, teamwork, and consistency among campus learners.",
+    description: "A full-stack E-Commerce web applicatin which Includes JWT authentication, user roles, admin dashboard, product management, and order tracking.",
     stack: {
-      fronted: "React(TSX), Redux Toolkit, Tailwind, AOS, Framer Motion",
-      backend: "Python, FastAPI, Heroku, MongoDB"
-    }},
+      fronted: "React(TSX), Tailwind, Axios",
+      backend: "NodeJS, ExpressJS, MongoDB, JWT, JOI"
+    }
+  },
+   
   {
     label: " Rental system Management",
     source: "https://github.com/nianod/Rental-management-system",
@@ -22,58 +24,6 @@ let handOnProjects = [
       stack: {
       fronted: "NextJs, Typescript,Javascript, Prisma ORM",
       backend: "App Router Architecture, MongoDB"
-    }
-  },
-  {
-    label: "Chatbot",
-    source: "https://github.com/nianod/Express-Ai-Chatbot",
-    live: "https://express-ai-chatbot.vercel.app/",
-    photo: "chatbot.jpeg",
-    name: "AI Chatbot",
-    mode: "public",
-    description: "This is a full-stack chatbot application powered by React (Vite) on the frontend and Express.js on the backend. Users can send messages, and the backend responds just like you're chatting with a bot!",
-       stack: {
-      fronted: "React(JSX), Typescript, Vite, Framer Motion",
-      backend: "NodeJs, ExpressJs, OpenAI API"
-    }
-  },
-  {
-    label: "Youtube Video Downloader",
-    source: "https://github.com/nianod/Youtube-downloader",
-    live: "https://youtube-video-downloader-two-delta.vercel.app/",
-    photo: "images.jpeg",
-    name: "Youtube Video Downloader",
-    mode: "public",
-    description: "A custom Node.js-based YouTube downloader built with Express and ytdl-core. Provides an API to fetch and download video/audio streams from YouTube URLs",
-          stack: {
-      fronted: "Html, Css, Javascript",
-      backend: "Node.js with Express.js"
-    }
-  },
-  {
-    label: "Github profile Finder",
-    source: "https://github.com/nianod/Github-Profile-Finder",
-    live: "https://github-profile-finder-smoky.vercel.app/",
-    photo: "Screenshot 2025-06-13 101018.png",
-    name: "Github profile Finder",
-    mode: "public",
-    description: "Site that allows users to search for GitHub profiles and view their details, including repositories, followers, and more.",
-    stack: {
-      fronted: "React(JSX), Taliwind",
-      backend: "Node.js with Express.js"
-    }    
-  },
-  {
-    label: "Car shelf",
-    source: "https://github.com/nianod/Milele-Car-Shelf",
-    live: "https://milele-car-shelf.vercel.app/",
-    photo: "Screenshot 2025-06-18 002149.png",
-    name: "Car shelf",
-    mode: "public",
-    description: "A simple web application to sell, buy and hire cars from Milele car sellers",
-    stack: {
-      fronted: "React(TSX), SweelAlert, Tailwind",
-      backend: "-"
     }
   },
   {
@@ -89,19 +39,18 @@ let handOnProjects = [
       backend: "Supabase sockets & Google Auth"
     }
   },
-  {
-    label: "E-commerce site",
-    source: "https://github.com/nianod/MERN-E-COMMERCE",
-    live: "https://github.com/nianod/MERN-E-COMMERCE",
-    photo: "download.jpeg",
-    name: "E-commerce site",
+ {
+    label: "Group-connect",
+    source: "https://github.com/nianod/Group-connect",
+    live: "https://group-connect-gamma.vercel.app",
+    photo: "group.jpeg",
+    name: "Group-connect",
     mode: "public",
-    description: "A full-stack E-Commerce web applicatin which Includes JWT authentication, user roles, admin dashboard, product management, and order tracking.",
+    description: "Group Connect is a collaborative web platform designed to help students find study partners, form small learning groups, and organize study sessions based on shared subjects or interests. It promotes peer-to-peer learning, teamwork, and consistency among campus learners.",
     stack: {
-      fronted: "React(TSX), Tailwind, Axios",
-      backend: "NodeJS, ExpressJS, MongoDB, JWT, JOI"
-    }
-  },
+      fronted: "React(TSX), Redux Toolkit, Tailwind, AOS, Framer Motion",
+      backend: "Python, FastAPI, Heroku, MongoDB"
+    }},
   {
     label: "Help-Hub",
     source: "https://github.com/nianod/Help-board-hub",
@@ -115,5 +64,58 @@ let handOnProjects = [
       backend: "Supabase Auth & Supabase Database, Python"
     }
   },
+  // {
+  //   label: "Chatbot",
+  //   source: "https://github.com/nianod/Express-Ai-Chatbot",
+  //   live: "https://express-ai-chatbot.vercel.app/",
+  //   photo: "chatbot.jpeg",
+  //   name: "AI Chatbot",
+  //   mode: "public",
+  //   description: "This is a full-stack chatbot application powered by React (Vite) on the frontend and Express.js on the backend. Users can send messages, and the backend responds just like you're chatting with a bot!",
+  //      stack: {
+  //     fronted: "React(JSX), Typescript, Vite, Framer Motion",
+  //     backend: "NodeJs, ExpressJs, OpenAI API"
+  //   }
+  // },
+  // {
+  //   label: "Youtube Video Downloader",
+  //   source: "https://github.com/nianod/Youtube-downloader",
+  //   live: "https://youtube-video-downloader-two-delta.vercel.app/",
+  //   photo: "images.jpeg",
+  //   name: "Youtube Video Downloader",
+  //   mode: "public",
+  //   description: "A custom Node.js-based YouTube downloader built with Express and ytdl-core. Provides an API to fetch and download video/audio streams from YouTube URLs",
+  //         stack: {
+  //     fronted: "Html, Css, Javascript",
+  //     backend: "Node.js with Express.js"
+  //   }
+  // },
+  // {
+  //   label: "Github profile Finder",
+  //   source: "https://github.com/nianod/Github-Profile-Finder",
+  //   live: "https://github-profile-finder-smoky.vercel.app/",
+  //   photo: "Screenshot 2025-06-13 101018.png",
+  //   name: "Github profile Finder",
+  //   mode: "public",
+  //   description: "Site that allows users to search for GitHub profiles and view their details, including repositories, followers, and more.",
+  //   stack: {
+  //     fronted: "React(JSX), Taliwind",
+  //     backend: "Node.js with Express.js"
+  //   }    
+  // },
+  // {
+  //   label: "Car shelf",
+  //   source: "https://github.com/nianod/Milele-Car-Shelf",
+  //   live: "https://milele-car-shelf.vercel.app/",
+  //   photo: "Screenshot 2025-06-18 002149.png",
+  //   name: "Car shelf",
+  //   mode: "public",
+  //   description: "A simple web application to sell, buy and hire cars from Milele car sellers",
+  //   stack: {
+  //     fronted: "React(TSX), SweelAlert, Tailwind",
+  //     backend: "-"
+  //   }
+  // },
+  
 ];
 export default handOnProjects
