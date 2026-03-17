@@ -4,8 +4,8 @@ import Resime from "../Components/resime";
 
  const USER_DATA = {
   name: "Arnold Katumo",
-  imageUrl: "/arnold.jpg",
-  imageII: "/Screenshot 2025-05-01 181530.png",
+  imageUrl: "/image.jpeg",
+  imageII: "/dis.png",
 };
 
 const MOVING_TEXTS = [
