@@ -109,7 +109,7 @@ const Skills = () => {
   );
 
   return (
-    <div className="mt-10 pb-20 min-h-screen bg-gradient-to-br from-gray-900 to-black py-12">
+    <div className="mt-10 pb-20 min-h-screen py-12">
        <div data-aos="fade-left" className="container mx-auto px-4 mb-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">

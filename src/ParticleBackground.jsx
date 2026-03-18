@@ -26,10 +26,6 @@ const ParticleBackground = () => {
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
         ctx.fillStyle = '#00ffff';  
         ctx.fill()
-
-
-
-        
       }
       
       update() {
@@ -114,3 +110,4 @@ const ParticleBackground = () => {
 };
 
 export default ParticleBackground;
+

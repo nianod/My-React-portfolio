@@ -1,8 +1,6 @@
 @import "tailwindcss";
  
- body {
-   background-image: linear-gradient(to bottom right, #111827, #000000);
-}
+ 
  
 .animating {
   width: 200px;
