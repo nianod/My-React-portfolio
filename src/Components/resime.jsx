@@ -13,6 +13,8 @@ const Resime = () => {
     document.body.removeChild(download)
   }
 
+
+  
   return (
     <div className="flex justify-center mt-3">
       <button
