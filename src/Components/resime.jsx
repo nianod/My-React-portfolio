@@ -1,6 +1,6 @@
 import { FaDownload } from "react-icons/fa";
 
-const resume_file = 'https://stack-by-arnold.vercel.app/Arnold_Katumo_FullStack_Developer_Resume.pdf';
+const resume_file = 'https://stack-by-arnold.vercel.app/Arnold_Katumo_Resume.pdf';
 
 const Resime = () => {
   const downloadResumeURL = (url) => {
@@ -13,6 +13,8 @@ const Resime = () => {
     document.body.removeChild(download)
   }
 
+
+  
   return (
     <div className="flex justify-center mt-3">
       <button

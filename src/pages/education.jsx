@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+ 
 import { softDev, codespace, university } from './Ui/educ';
 import { FaGraduationCap, FaLaptop, FaAd, FaInfinity } from "react-icons/fa";
 
@@ -35,7 +35,7 @@ const Education = () => {
       data-aos-delay={index * 200}
       className="group relative w-full max-w-2xl mb-6 transition-all duration-500"
     >
-      <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden">
+      <div className="relative   border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden">
          <div className={`absolute inset-0 bg-gradient-to-r ${education.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`} />
         
          <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${education.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
@@ -74,7 +74,7 @@ const Education = () => {
   );
 
   return (
-    <div className="mt-10 pb-20 min-h-screen bg-gradient-to-br from-gray-900 to-black py-12">
+    <div className="mt-10 pb-20 min-h-screen   py-12">
       <div className="container mx-auto px-4">
          <div className="text-center mb-16">
           <div data-aos="fade-up" className="mb-8">

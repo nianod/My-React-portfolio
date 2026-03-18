@@ -18,7 +18,7 @@ const Projects = () => {
     <div
       data-aos="fade-up"
        
-      className="group relative bg-gradient-to-br from-gray-900 to-black border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden transition-all duration-500"
+      className="group relative    border border-gray-700 rounded-2xl p-6 backdrop-blur-sm overflow-hidden transition-all duration-500"
     >
  
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0  " />
@@ -111,7 +111,7 @@ const Projects = () => {
  
 
   return (
-    <div className="pb-20 mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-black py-12">
+    <div className="pb-20 mt-10 min-h-screen py-12">
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
