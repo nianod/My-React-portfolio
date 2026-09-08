@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import reach from './Ui/conts'
 import emailjs from "@emailjs/browser"
-
+import { useRef } from "react";
 
 
 const Contact = () => {
@@ -11,6 +11,8 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [timestamp, setTimestamp] = useState(null)
   const [loading, setLoading] = useState(false)
+    const [visits, setVisits] = useState(0)
+      const hasVisited = useRef(false);
 
 
 const handleSubmit = async (e) => {
@@ -56,6 +58,16 @@ const handleSubmit = async (e) => {
     };
     type();
   }, []);
+
+  useEffect(() => {
+  if (hasVisited.current) return;
+  hasVisited.current = true
+  const API = import.meta.env.VITE_API
+
+  fetch(`${API}/visit`, { method: "POST" })
+    .then(res => res.json())
+    .then(data => setVisits(data.visits));
+}, []);
 
    
   if (sent) {
@@ -148,6 +160,7 @@ const handleSubmit = async (e) => {
           >
             {loading ? "Sending..." : "Send Message"} 
           </button>
+          <p className="text-center text-black">visitors {visits}</p>
         </form>
       </div>
     </div>

@@ -18,6 +18,7 @@
     "cors": "^2.8.5",
     "date-fns": "^4.4.0",
     "express": "^5.1.0",
+    "lucide-react": "^1.42.0",
     "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

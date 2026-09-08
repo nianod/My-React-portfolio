@@ -1,16 +1,19 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import awinging from "./Ui/dummy";
-import Resime from "../Components/resime"
-import { useRef } from "react";
+import Resime from "../Components/resime";
+import { Mic, Play, Square } from "lucide-react";
 
- const USER_DATA = {
+const USER_DATA = {
   name: "Arnold Katumo",
   imageUrl: "/image.jpeg",
   imageII: "/dis.png",
 };
 
+export const speech_to_talk =
+  "Hello, am Arnold. A Full-Stack Developer and DevOps Engineer with hands-on experience building and shipping scalable web applications  from pixel-perfect frontends to robust backend systems and the infrastructure that keeps them running. On the engineering side, I design and develop across the full stack: crafting responsive, performant UIs, architecting RESTful and event-driven APIs, modeling databases, and implementing authentication systems built for real-world complexity. On the DevOps side, I bring that same rigor to CI CD pipelines, deployment workflows, and cloud infrastructure  ensuring that what gets built also gets delivered reliably and at scale. Am driven by a commitment to understanding systems deeply, not just making them work, but understanding why they work. That foundation shapes how I write clean, maintainable code, design resilient architectures, and approach every layer of the stack with intention.Beyond the technical work, I actively contribute to the developer community mentoring peers, leading collaborative engineering initiatives, and helping others grow their craft.Currently exploring distributed systems, DevOps automation, and modern backend engineering patterns as I continue building toward a career at the intersection of software development and infrastructure.";
+
 const MOVING_TEXTS = [
-  "Hello my name is Arnold...",  
+  "Hello my name is Arnold...",
   "DevOps Archtect...",
   "A Software Developer...",
   "System DEveloper...",
@@ -23,18 +26,56 @@ const PAUSE_DURATION = 500;
 const Home = () => {
   const [text, setText] = useState("");
   const [textIndex, setTextIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [visits, setVisits] = useState(0)
-    const hasVisited = useRef(false);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
 
-   const typeEffect = useCallback(() => {
+ const wordIndexRef = useRef(0);
+const utteranceRef = useRef(null);
+
+const play = () => {
+  window.speechSynthesis.cancel();
+
+  // Slice the text from where we left off
+  const words = speech_to_talk.split(" ");
+  const remainingText = words.slice(wordIndexRef.current).join(" ");
+
+  const speech = new SpeechSynthesisUtterance(remainingText);
+  speech.rate = 0.85;
+  speech.pitch = 1;
+  speech.volume = 1;
+
+  // Track word position as it speaks
+  speech.onboundary = (e) => {
+    if (e.name === "word") {
+      wordIndexRef.current += 1;
+    }
+  };
+
+  speech.onstart = () => setIsSpeaking(true);
+
+  speech.onend = () => {
+    setIsSpeaking(false);
+    wordIndexRef.current = 0; // reset when fully done
+  };
+
+  speech.onerror = () => setIsSpeaking(false);
+
+  utteranceRef.current = speech;
+  window.speechSynthesis.speak(speech);
+};
+
+const stop = () => {
+  window.speechSynthesis.cancel();
+  setIsSpeaking(false);
+  // wordIndexRef.current keeps its value — resume from here next time
+};
+
+  const typeEffect = useCallback(() => {
     const currentText = MOVING_TEXTS[textIndex];
     const shouldType = !isDeleting && text.length < currentText.length;
     const shouldDelete = isDeleting && text.length > 0;
     const shouldPause = !isDeleting && text.length === currentText.length;
-    const shouldMoveToNext = isDeleting && text.length === 0
-  
-
+    const shouldMoveToNext = isDeleting && text.length === 0;
 
     if (shouldType) {
       const timeout = setTimeout(() => {
@@ -66,22 +107,11 @@ const Home = () => {
     return cleanup;
   }, [typeEffect]);
 
-useEffect(() => {
-  if (hasVisited.current) return;
-  hasVisited.current = true
-  const API = import.meta.env.VITE_API
-
-  fetch(`${API}/visit`, { method: "POST" })
-    .then(res => res.json())
-    .then(data => setVisits(data.visits));
-}, []);
-
   return (
     <div className="mt-10 pb-5 min-h-screen bg-gradient-to-br from-gray-900/9o-black/90 relative z-10">
       <div className="container mx-auto px-4 py-8">
-         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          
-           <div className="flex flex-col items-center lg:items-start space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="flex flex-col items-center lg:items-start space-y-6">
             <div className="relative group">
               <img
                 className="w-48 h-48 object-cover rounded-full border-4 border-blue-500 shadow-lg  transition-transform duration-300"
@@ -90,12 +120,12 @@ useEffect(() => {
               />
               <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-blue-300 transition-all duration-300" />
             </div>
-            
+
             <div className="text-center lg:text-left">
               <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                 {USER_DATA.name}
               </h1>
-              
+
               <div className="mt-4 min-h-8">
                 <h2 className="text-xl font-semibold text-gray-300">
                   {text}
@@ -110,12 +140,50 @@ useEffect(() => {
                 <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-600">
                   Ideas into Code
                 </div>
-                <p className="te">visitors {visits}</p>
+                <div className=" ">
+                 
+                  <div className="mt-6 space-y-2">
+                     
+                    <div className="flex justify-center mt-6">
+                      <div className="relative flex items-center justify-center">
+                    
+                        {isSpeaking && (
+                          <>
+                            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border-2 border-white/70 animate-ping" />
+                            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full border-2 border-white/40 animate-ping animation-delay-200" />
+                            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full border-2 border-white/20 animate-ping animation-delay-400" />
+                          </>
+                        )}
+
+                        <button
+                          onClick={isSpeaking ? stop : play}
+                          className={`
+          relative z-10 cursor-pointer
+            hover:bg-gray-800
+          rounded-full
+          p-7
+          transition-all duration-300
+          ${isSpeaking ? "scale-110 bg-black" : "bg-gray-700"}
+        `}
+                        >
+                          {isSpeaking ? (
+                            <div className="flex items-center justify-center gap-1">
+                              <div className="w-1 h-5 bg-white rounded-sm" />
+                              <div className="w-1 h-5 bg-white rounded-sm" />
+                            </div>
+                          ) : (
+                            <Play size={20} color="white" />
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-           <div className="space-y-8">
+          <div className="space-y-8">
             <div className="text-center">
               <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
                 About Me
@@ -125,17 +193,18 @@ useEffect(() => {
 
             <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
-  I'm a self-taught and passionate DevOps Engineer and Software Developer 
-  from Kenya, currently pursuing a degree in Information Technology at 
-  Meru University. I specialize in building scalable, responsive, and 
-  high-performing applications while designing reliable infrastructure, 
-  automating workflows, and implementing modern CI/CD and cloud deployment 
-  practices that power seamless digital experiences.
-</p>
+                I'm a self-taught and passionate DevOps Engineer and Software
+                Developer from Kenya, currently pursuing a degree in Information
+                Technology at Meru University. I specialize in building
+                scalable, responsive, and high-performing applications while
+                designing reliable infrastructure, automating workflows, and
+                implementing modern CI/CD and cloud deployment practices that
+                power seamless digital experiences.
+              </p>
 
               <Resime />
 
-               <div className="space-y-6">
+              <div className="space-y-6">
                 <div className="bg-transparent border border-blue-500/30 p-6 rounded-xl backdrop-blur-sm">
                   <p className="text-green-300 font-semibold text-center">
                     {awinging.digital}
@@ -143,14 +212,16 @@ useEffect(() => {
                 </div>
 
                 <blockquote className="text-gray-300 italic text-center border-l-4 border-blue-500 pl-4 py-2 bg-blue-900/20 rounded-r-lg">
-                  "My journey in tech is driven by curiosity and the desire to 
+                  "My journey in tech is driven by curiosity and the desire to
                   create meaningful digital solutions that make a difference."
                 </blockquote>
 
-                 <div className="flex justify-center gap-4 mt-6">
+                <div className="flex justify-center gap-4 mt-6">
                   <div className="bg-blue-900/30 border border-blue-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
                     <div className="text-2xl font-bold text-blue-300">3+</div>
-                    <div className="text-sm text-blue-200">Years Experience</div>
+                    <div className="text-sm text-blue-200">
+                      Years Experience
+                    </div>
                   </div>
                   <div className="bg-green-900/30 border border-green-500/50 px-6 py-3 rounded-lg text-center backdrop-blur-sm hover:scale-105 transition-transform duration-200">
                     <div className="text-2xl font-bold text-green-300">20+</div>
@@ -158,7 +229,7 @@ useEffect(() => {
                   </div>
                 </div>
 
-                <div 
+                <div
                   className="bg-transparent border border-blue-500/30 p-6 rounded-xl backdrop-blur-sm"
                   data-aos="flip-up"
                 >
@@ -170,7 +241,7 @@ useEffect(() => {
             </div>
           </div>
 
-           <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end">
             <div className="relative group">
               <img
                 className="animating border-2 border-gray-700 group-hover:border-blue-400 transition-all duration-500 group-hover:scale-105"
